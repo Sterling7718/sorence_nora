@@ -62,8 +62,22 @@ body {
 }
 
 .hexagon:hover {
-  transition: 0s; /* Remove transition on hover */
-  background: #00ffff; /* Change background to blue on hover */
-  cursor: default; /* Set cursor to default on hover */
-  animation: animate 4s linear infinite; /* Apply hue rotation animation */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+  background-color: #00ffff; /* Change background color to blue on hover */
+  cursor: pointer; /* Set cursor to pointer on hover for better user feedback */
+}
+
+@media (hover: hover) {
+  .hexagon:hover {
+    animation: animate 4s linear infinite; /* Apply hue rotation animation only on devices that support hover */
+  }
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg); /* Start hue rotation at 0 degrees */
+  }
+  100% {
+    filter: hue-rotate(360deg); /* End hue rotation at 360 degrees */
+  }
 }
