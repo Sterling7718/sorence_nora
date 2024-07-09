@@ -40,7 +40,7 @@ const Background = () => {
               onMouseEnter={(e) => {
                 e.currentTarget.style.transition = "0s";
                 e.currentTarget.style.background = "#00ffff";
-                e.currentTarget.style.animation = "4s linear infinite";
+                e.currentTarget.style.animation = " 4s linear infinite";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transition = "1s";
