@@ -1,0 +1,69 @@
+* {
+  margin: 0; /* Reset margin for all elements */
+  padding: 0; /* Reset padding for all elements */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+  background: #000b0d; /* Set the background color to black */
+  min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+}
+
+.container {
+  position: absolute; /* Position relative to allow absolute positioning of children */
+  height: 100vh; /* Set container height to full viewport height */
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg); /* Start hue rotation at 0 degrees */
+  }
+  100% {
+    filter: hue-rotate(360deg); /* End hue rotation at 360 degrees */
+  }
+}
+
+.row {
+  display: inline-flex; /* Display rows as inline-flex to align hexagons */
+  margin-left: -25px; /* Offset to align hexagons properly */
+  margin-top: -20px; /* Vertical offset for alignment */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.row.altline {
+  margin-left: 1px; /* Adjust margin for alternate rows */
+}
+
+.hexagon {
+  position: relative; /* Position relative to allow pseudo-element positioning */
+  height: 60px; /* Set height of hexagon */
+  width: 50px; /* Set width of hexagon */
+  background: #000e10; /* Set background color of hexagon */
+  margin: 1px; /* Margin between hexagons */
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  ); /* Create hexagon shape */
+  transition: 2s; /* Transition effect for background change */
+}
+
+.hexagon:before {
+  content: ""; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning inside hexagon */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  width: 50%; /* Set width to 50% of hexagon */
+  height: 100%; /* Set height to 100% of hexagon */
+  pointer-events: none; /* Disable pointer events on pseudo-element */
+}
+
+.hexagon:hover {
+  transition: 0s; /* Remove transition on hover */
+  background: #00ffff; /* Change background to blue on hover */
+  cursor: default; /* Set cursor to default on hover */
+  animation: animate 4s linear infinite; /* Apply hue rotation animation */
+}

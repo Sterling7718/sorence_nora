@@ -1,7 +1,16 @@
+import React from "react";
+import Background from "./Background";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>hello</p>
-    </main>
+    <div className="relative w-screen h-screen overflow-hidden">
+      <div className="z-10 text-white flex items-center justify-center absolute">
+        <div className="text-center">
+          <p>hi, I&apos;m</p>
+          <h1>Sorence Nora</h1>
+        </div>
+      </div>
+      <Background />
+    </div>
   );
 }
