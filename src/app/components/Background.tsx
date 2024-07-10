@@ -3,7 +3,10 @@
 import React, { useState, useEffect } from "react";
 
 const Background = () => {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 }); // Initialize state for mouse position
+  const [mousePos, setMousePos] = useState({
+    x: window.innerWidth / 3,
+    y: window.innerHeight / 2,
+  }); // Initialize state for mouse position at the center
 
   // Function to update mouse position
   const handleMouseMove = (event: { clientX: number; clientY: number }) => {
@@ -24,7 +27,7 @@ const Background = () => {
   };
 
   // Calculate background glow based on mouse position
-  const glowEffect = `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, #00ffff 20%, #000b0d 70%)`; // Adjust color stops for a smaller glow
+  const glowEffect = `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, #00ffff 10%, #000b0d 50%)`; // Adjust color stops for a smaller glow
   // Create a radial gradient for the background glow effect
 
   return (
