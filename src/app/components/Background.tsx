@@ -24,7 +24,8 @@ const Background = () => {
   };
 
   // Calculate background glow based on mouse position
-  const glowEffect = `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, #00ffff, #000b0d)`; // Create a radial gradient for the background glow effect
+  const glowEffect = `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, #00ffff 20%, #000b0d 70%)`; // Adjust color stops for a smaller glow
+  // Create a radial gradient for the background glow effect
 
   return (
     <div
