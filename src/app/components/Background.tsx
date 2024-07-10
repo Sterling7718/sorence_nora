@@ -13,7 +13,7 @@ const Background = () => {
   // Set initial mouse position to the center on component mount
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setMousePos({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+      setMousePos({ x: window.innerWidth / 3, y: window.innerHeight / 2 });
       window.addEventListener("mousemove", handleMouseMove);
     }
     return () => {
