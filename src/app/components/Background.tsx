@@ -13,7 +13,7 @@ const Background = () => {
   // Set initial mouse position to the center on component mount
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setMousePos({ x: window.innerWidth / 3, y: window.innerHeight / 2 });
+      setMousePos({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
       window.addEventListener("mousemove", handleMouseMove);
     }
     return () => {
@@ -68,18 +68,8 @@ const Background = () => {
                   margin: "1px",
                   clipPath:
                     "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-                  boxShadow: distance < 3 ? "0 0 2px #00ffff" : "none", // Modify the glow size here
+                  boxShadow: distance < 2 ? "0 0 2px #00ffff" : "none", // Modify the glow size here
                   transition: "2s",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transition = "0s";
-                  e.currentTarget.style.background = "#00ffff";
-                  e.currentTarget.style.animation = "4s linear infinite";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transition = "1s";
-                  e.currentTarget.style.background = "#000e10";
-                  e.currentTarget.style.animation = "";
                 }}
               ></div>
             );
