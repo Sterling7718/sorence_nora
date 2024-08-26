@@ -43,7 +43,7 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
 // NavBar component that contains the navigation links
 const NavBar = () => {
   return (
-    <nav className="font-poppins max-w-3xl mx-auto rounded-[50px] backdrop-blur-[5px] px-4 py-2 font-semibold mt-4">
+    <nav className="font-poppins max-w-3xl mx-auto rounded-[50px] backdrop-blur-[5px] pl-6 pr-4 py-2 font-semibold mt-4">
       <div className="flex space-x-16 justify-center text-poppins1_5rem">
         {/* Map over an array of section names to create links */}
         {["Home", "Skills", "Projects", "Resume", "Contact"].map(
