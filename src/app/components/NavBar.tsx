@@ -21,8 +21,8 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
   // Define classes for the link based on hover state
   const linkClasses = `relative transition-all duration-200 ${
     isHovered
-      ? "text-foregroundparchment"
-      : "text-foregroundlightcyan opacity-30" // Change text color based on hover
+      ? "text-foregroundparchment font-bold"
+      : "text-foregroundlightcyan opacity-30 " // Change text color based on hover
   }`;
 
   // Determine the appropriate icon based on the link text
@@ -56,10 +56,10 @@ const NavBar = () => {
       {/* Add the Material Symbols stylesheet once */}
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0"
       />
 
-      <nav className="font-sans max-w-4xl mx-auto rounded-[50px] backdrop-blur-[5px] px-4 py-2 font-bold mt-4">
+      <nav className="font-sans max-w-4xl mx-auto rounded-[50px] backdrop-blur-[5px] px-4 py-2 font-semibold mt-4">
         <div className="flex space-x-16 justify-center text-poppins1_5rem">
           {/* Map over an array of section names to create links */}
           {["Home", "Skills", "Projects", "Resume", "Contact"].map(
