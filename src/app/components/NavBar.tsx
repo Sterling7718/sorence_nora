@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-// Define a mapping object to handle icon display based on the link text
 const iconMap: { [key: string]: string } = {
   Home: "home",
   Skills: "stacks",
@@ -11,29 +11,26 @@ const iconMap: { [key: string]: string } = {
   Contact: "mail",
 };
 
-// CustomNavLink component that handles individual link behavior
 const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
   link,
   children,
 }) => {
-  const [isHovered, setIsHovered] = useState(false); // State to track if the link is hovered
+  const [isHovered, setIsHovered] = useState(false);
 
-  // Define classes for the link based on hover state
-  const linkClasses = `relative transition-all duration-200 ${
+  const linkClasses = `transition-all duration-200 ${
     isHovered
       ? "text-foregroundparchment"
-      : "text-foregroundlightcyan opacity-30" // Change text color based on hover
+      : "text-foregroundlightcyan opacity-30"
   }`;
 
-  // Determine the appropriate icon based on the link text
   const iconName = iconMap[children as string];
 
   return (
     <Link
-      href={link} // Link destination
-      onMouseEnter={() => setIsHovered(true)} // Set hover state to true on mouse enter
-      onMouseLeave={() => setIsHovered(false)} // Set hover state to false on mouse leave
-      className={linkClasses} // Apply computed classes
+      href={link}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={linkClasses}
     >
       <span className="relative">
         {isHovered && <span className="absolute top-0 -left-10">&lt;</span>}
@@ -49,30 +46,37 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
   );
 };
 
-// NavBar component that contains the navigation links
 const NavBar = () => {
   return (
     <>
-      {/* Add the Material Symbols stylesheet once */}
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0"
       />
+      <div className="flex items-center justify-between max-w-4xl mx-auto mt-4">
+        {/* Logo Image */}
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          width={50}
+          height={50}
+          className="h-20 w-20 mr-6" // Adjusted height and width for better alignment
+        />
 
-      <nav className="font-sans max-w-4xl mx-auto rounded-[50px] backdrop-blur-[5px] px-4 py-2 font-semibold mt-4">
-        <div className="flex space-x-16 justify-center text-poppins1_5rem">
-          {/* Map over an array of section names to create links */}
-          {["Home", "Skills", "Projects", "Resume", "Contact"].map(
-            (section, index) => (
-              <CustomNavLink key={index} link={`#${section.toLowerCase()}`}>
-                {section}
-              </CustomNavLink>
-            )
-          )}
-        </div>
-      </nav>
+        <nav className="flex-1 flex items-center justify-center font-sans rounded-[50px] backdrop-blur-[5px] pt-2 pb-3 font-semibold">
+          <div className="flex space-x-16 text-poppins1_5rem">
+            {["Home", "Skills", "Projects", "Resume", "Contact"].map(
+              (section, index) => (
+                <CustomNavLink key={index} link={`#${section.toLowerCase()}`}>
+                  {section}
+                </CustomNavLink>
+              )
+            )}
+          </div>
+        </nav>
+      </div>
     </>
   );
 };
 
-export default NavBar; // Export the NavBar component
+export default NavBar;
