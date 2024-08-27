@@ -24,7 +24,7 @@ const config: Config = {
         },
       },
       fontSize: {
-        heroheadingpoppins7rem: "7rem",
+        heroheading7rem: "7rem",
         headingedu2_5rem: "2.5rem",
         subheadingpoppins3rem: "3rem",
         subheadingpoppins2rem: "2rem",
@@ -35,7 +35,7 @@ const config: Config = {
         subheadingpoppins2_5rem: "2.5rem",
       },
       fontWeight: {
-        heroheadingpoppins7rem: "700",
+        heroheading7rem: "700",
         headingedu2_5rem: "700",
         subheadingpoppins3rem: "700",
         subheadingpoppins2rem: "700",

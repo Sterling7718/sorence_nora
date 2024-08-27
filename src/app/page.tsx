@@ -9,7 +9,7 @@ import NavBar from "./components/NavBar";
 
 export default function Home() {
   return (
-    <main className="relative w-screen h-screen overflow-y-auto">
+    <main className="font-sans relative w-screen h-screen overflow-y-auto">
       {/* Changed overflow-hidden to overflow-y-auto to allow vertical scrolling */}
       <div className="text-white z-10 relative w-full">
         <NavBar />
