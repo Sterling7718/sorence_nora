@@ -51,7 +51,7 @@ const NavBar = () => {
     <>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0"
       />
       <div className="sticky top-0 flex items-center justify-between max-w-4xl mx-auto my-4 z-50">
         {/* Logo Image */}

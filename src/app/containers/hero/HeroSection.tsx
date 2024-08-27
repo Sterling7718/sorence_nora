@@ -18,7 +18,7 @@ const HeroSection = () => {
             <h1 className=" text-heroheading7rem font-heroheading7rem">
               Sorence
             </h1>
-            <h1 className="text-heroheading7rem font-heroheading7rem  -mt-16">
+            <h1 className="text-heroheading7rem font-heroheading7rem -mt-16">
               Nora
             </h1>
           </div>
