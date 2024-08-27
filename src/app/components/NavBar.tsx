@@ -31,6 +31,27 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
     </span>
   );
 
+  const skillIcon = isHovered && children === "Skills" && (
+    <span className="material-symbols-outlined absolute top-0 left-[-25px]">
+      stacks
+    </span>
+  );
+  const depCode = isHovered && children === "Projects" && (
+    <span className="material-symbols-outlined absolute top-0 left-[-25px]">
+      deployed_code
+    </span>
+  );
+  const accountBox = isHovered && children === "Resume" && (
+    <span className="material-symbols-outlined absolute top-0 left-[-25px]">
+      account_box
+    </span>
+  );
+  const mail = isHovered && children === "Contact" && (
+    <span className="material-symbols-outlined absolute top-0 left-[-25px]">
+      mail
+    </span>
+  );
+
   return (
     <Link
       href={link} // Link destination
@@ -43,6 +64,10 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
         {children}
         {rightArrow}
         {homeIcon} {/* Render the home icon when hovered */}
+        {skillIcon} {/* Render the home icon when hovered */}
+        {depCode} {/* Render the home icon when hovered */}
+        {accountBox} {/* Render the home icon when hovered */}
+        {mail} {/* Render the home icon when hovered */}
       </span>
     </Link>
   );
@@ -55,7 +80,27 @@ const NavBar = () => {
       {/* Add the Material Symbols stylesheet */}
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      />
+
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      />
+
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      />
+
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      />
+
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
       />
       <nav className="font-poppins max-w-4xl mx-auto rounded-[50px] backdrop-blur-[5px] px-4 py-2 font-semibold mt-4">
         <div className="flex space-x-16 justify-center text-poppins1_5rem">

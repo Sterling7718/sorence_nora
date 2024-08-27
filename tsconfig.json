@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/containers/hero"
+    "src/app/containers/hero",
+    "src/app/pages/_documents.js"
   ],
   "exclude": ["node_modules"]
 }
