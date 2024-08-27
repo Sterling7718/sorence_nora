@@ -1,7 +1,7 @@
 import React from "react";
 
 const HeroSection = () => {
-  return <div className=" font-poppins">HeroSection</div>;
+  return <div>HeroSection</div>;
 };
 
 export default HeroSection;

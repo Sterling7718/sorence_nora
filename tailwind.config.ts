@@ -19,7 +19,7 @@ const config: Config = {
         DEFAULT: {
           css: {
             color: "rgba(239, 232, 210, 1)",
-            fontFamily: "Poppins, sans-serif", // Apply Poppins globally in typography
+            fontFamily: "cursive, sans-serif", // Apply Poppins globally in typography
           },
         },
       },
@@ -46,8 +46,7 @@ const config: Config = {
         subheadingpoppins2_5rem: "700",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        edu: ["Edu AU VIC WA NT Hand", "cursive"],
+        edu: ["cursive", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
