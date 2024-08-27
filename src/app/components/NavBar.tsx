@@ -53,7 +53,7 @@ const NavBar = () => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0"
       />
-      <div className="flex items-center justify-between max-w-4xl mx-auto mt-4">
+      <div className="flex items-center justify-between max-w-4xl mx-auto my-4">
         {/* Logo Image */}
         <Image
           src="/logo.png"
