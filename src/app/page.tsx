@@ -9,15 +9,26 @@ import NavBar from "./components/NavBar";
 
 export default function Home() {
   return (
-    <main className="relative w-screen h-screen overflow-hidden">
-      <div className=" text-white z-10 relative w-full">
+    <main className="relative w-screen h-screen overflow-y-auto">
+      {/* Changed overflow-hidden to overflow-y-auto to allow vertical scrolling */}
+      <div className="text-white z-10 relative w-full">
         <NavBar />
         <div className="text-center">
-          <HeroSection />
-          <SkillSection />
-          <ProjectsSection />
-          <ResumeSection />
-          <ContactSection />
+          <div id="home">
+            <HeroSection />
+          </div>
+          <div id="skills">
+            <SkillSection />
+          </div>
+          <div id="projects">
+            <ProjectsSection />
+          </div>
+          <div id="resume">
+            <ResumeSection />
+          </div>
+          <div id="contact">
+            <ContactSection />
+          </div>
         </div>
       </div>
       <Background />
