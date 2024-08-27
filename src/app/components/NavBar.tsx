@@ -21,8 +21,8 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
   // Define classes for the link based on hover state
   const linkClasses = `relative transition-all duration-200 ${
     isHovered
-      ? "text-foregroundparchment font-bold"
-      : "text-foregroundlightcyan opacity-30 " // Change text color based on hover
+      ? "text-foregroundparchment"
+      : "text-foregroundlightcyan opacity-30" // Change text color based on hover
   }`;
 
   // Determine the appropriate icon based on the link text
