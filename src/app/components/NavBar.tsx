@@ -16,12 +16,19 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
 
   // Left arrow shown on hover
   const leftArrow = isHovered && (
-    <span className=" absolute top-0 -left-10 ">&lt;</span>
+    <span className="absolute -top-1 -left-10">&lt;</span>
   );
 
   // Right arrow shown on hover
   const rightArrow = isHovered && (
-    <span className=" absolute top-0 -right-7 ">/&gt;</span>
+    <span className="absolute -top-1 -right-7">/&gt;</span>
+  );
+
+  // Home icon shown on hover for the "Home" link
+  const homeIcon = isHovered && children === "Home" && (
+    <span className="material-symbols-outlined absolute top-0 left-[-25px]">
+      home
+    </span>
   );
 
   return (
@@ -31,10 +38,11 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
       onMouseLeave={() => setIsHovered(false)} // Set hover state to false on mouse leave
       className={linkClasses} // Apply computed classes
     >
-      <span>
+      <span className="relative">
         {leftArrow}
         {children}
         {rightArrow}
+        {homeIcon} {/* Render the home icon when hovered */}
       </span>
     </Link>
   );
@@ -43,18 +51,25 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
 // NavBar component that contains the navigation links
 const NavBar = () => {
   return (
-    <nav className="font-poppins max-w-3xl mx-auto rounded-[50px] backdrop-blur-[5px] pl-6 pr-4 py-2 font-semibold mt-4">
-      <div className="flex space-x-16 justify-center text-poppins1_5rem">
-        {/* Map over an array of section names to create links */}
-        {["Home", "Skills", "Projects", "Resume", "Contact"].map(
-          (section, index) => (
-            <CustomNavLink key={index} link={`#${section.toLowerCase()}`}>
-              {section}
-            </CustomNavLink>
-          )
-        )}
-      </div>
-    </nav>
+    <>
+      {/* Add the Material Symbols stylesheet */}
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap"
+      />
+      <nav className="font-poppins max-w-4xl mx-auto rounded-[50px] backdrop-blur-[5px] px-4 py-2 font-semibold mt-4">
+        <div className="flex space-x-16 justify-center text-poppins1_5rem">
+          {/* Map over an array of section names to create links */}
+          {["Home", "Skills", "Projects", "Resume", "Contact"].map(
+            (section, index) => (
+              <CustomNavLink key={index} link={`#${section.toLowerCase()}`}>
+                {section}
+              </CustomNavLink>
+            )
+          )}
+        </div>
+      </nav>
+    </>
   );
 };
 
