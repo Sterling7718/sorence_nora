@@ -55,13 +55,19 @@ const NavBar = () => {
       />
       <div className="sticky top-0 flex items-center justify-between max-w-4xl mx-auto my-4 z-50">
         {/* Logo Image */}
-        <Image
-          src="/logo.png"
-          alt="Logo"
-          width={50}
-          height={50}
-          className="h-20 w-20 mr-6"
-        />
+        <div className="relative flex items-center">
+          {/* Box behind the image with background blur */}
+          <div className="absolute w-20 h-20 bg-bg rounded-lg backdrop-blur-[30px]"></div>
+
+          {/* Image */}
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={50}
+            height={50}
+            className="relative h-20 w-20 mr-6"
+          />
+        </div>
 
         <nav className="flex-1 flex items-center justify-center font-sans rounded-[50px] backdrop-blur-[5px] pt-2 pb-3 font-semibold">
           <div className="flex space-x-16 text-poppins1_5rem">
