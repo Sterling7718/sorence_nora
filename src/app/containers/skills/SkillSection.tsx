@@ -15,14 +15,30 @@ const SkillSection = () => {
 
           <div className=" flex flex-row justify-center w-[350px] items-center flex-wrap">
             <SkillCards src={"/techLogos/Html5.svg"} borderColor={"#E34F26"} />
-            <SkillCards src={"/"} borderColor={"#00FFFF"} />
-            <SkillCards src={"/"} borderColor={"#00FFFF"} />
-            <SkillCards src={"/"} borderColor={"#00FFFF"} />
-            <SkillCards src={"/"} borderColor={"#00FFFF"} />
-            <SkillCards src={"/"} borderColor={"#00FFFF"} />
-            <SkillCards src={"/"} borderColor={"#00FFFF"} />
-            <SkillCards src={"/"} borderColor={"#00FFFF"} />
-            <SkillCards src={"/"} borderColor={"#00FFFF"} />
+            <SkillCards src={"/techLogos/css.svg"} borderColor={"#264DE4"} />
+            <SkillCards
+              src={"/techLogos/Tailwind.svg"}
+              borderColor={"#38BDF8"}
+            />
+            <SkillCards
+              src={"/techLogos/JavaScript.svg"}
+              borderColor={"#F7DF1E"}
+            />
+            <SkillCards
+              src={"/techLogos/Typescript.svg"}
+              borderColor={"#3178C6"}
+            />
+            <SkillCards src={"/techLogos/React.svg"} borderColor={"#61DAFB"} />
+            <SkillCards src={"/techLogos/Nextjs.svg"} borderColor={"#FFFFFF"} />
+
+            <SkillCards
+              src={"/techLogos/Supabase.svg"}
+              borderColor={"#3ECF8E"}
+            />
+            <SkillCards
+              src={"/techLogos/Postgresql.svg"}
+              borderColor={"#336791"}
+            />
           </div>
         </div>
         <div
@@ -32,8 +48,11 @@ const SkillSection = () => {
           <h1 className="text-poppins1_5rem p-2">&lt;Design /&gt;</h1>
 
           <div className=" flex flex-row justify-center w-[350px] items-center flex-wrap">
-            <SkillCards src={"/"} borderColor={"#00FFFF"} />
-            <SkillCards src={"/"} borderColor={"#00FFFF"} />
+            <SkillCards
+              src={"/techLogos/Photoshop.svg"}
+              borderColor={"#31A8FF"}
+            />
+            <SkillCards src={"/techLogos/figma.svg"} borderColor={"#A259FF"} />
           </div>
         </div>
       </div>
