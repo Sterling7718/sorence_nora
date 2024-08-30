@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       )}
 
-      <div id="home" className="pt-1">
+      <div id="home" className="pt-1 h-screen">
         <div ref={targetRef}>
           <NavBar />
         </div>
