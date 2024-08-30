@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <main className=" border container mx-auto w-full z-10 max-h-full flex items-center justify-center">
+    <main className="container mx-auto w-full z-10 max-h-full flex items-center justify-center">
       {/* The w-full and h-screen classes make the div cover the full screen */}
       <div className="flex items-center">
         <div className="flex flex-row">

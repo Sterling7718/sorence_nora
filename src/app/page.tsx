@@ -42,7 +42,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="border text-foregroundparchment font-sans relative w-screen h-screen overflow-y-auto">
+    <main className=" text-foregroundparchment font-sans relative w-screen h-screen overflow-y-auto text-center z-10 relative w-full">
       {/* Changed overflow-hidden to overflow-y-auto to allow vertical scrolling */}
 
       {isVisible && (
@@ -51,28 +51,23 @@ export default function Home() {
         </div>
       )}
 
-      <div className="z-10 relative w-full">
-        <div className="text-center">
-          <div id="home" className="border">
-            {" "}
-            <div ref={targetRef}>
-              <NavBar />
-            </div>
-            <HeroSection />
-          </div>
-          <div id="skills" className="border">
-            <SkillSection />
-          </div>
-          <div id="projects" className="border">
-            <ProjectsSection />
-          </div>
-          <div id="resume" className="border">
-            <ResumeSection />
-          </div>
-          <div id="contact" className="border">
-            <ContactSection />
-          </div>
+      <div id="home" className="pt-1">
+        <div ref={targetRef}>
+          <NavBar />
         </div>
+        <HeroSection />
+      </div>
+      <div id="skills" className="border">
+        <SkillSection />
+      </div>
+      <div id="projects" className="border">
+        <ProjectsSection />
+      </div>
+      <div id="resume" className="border">
+        <ResumeSection />
+      </div>
+      <div id="contact" className="border">
+        <ContactSection />
       </div>
       <Background />
     </main>

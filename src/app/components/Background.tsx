@@ -60,7 +60,7 @@ const Background = () => {
                   position: "relative",
                   height: "60px",
                   width: "50px",
-                  background: distance < 1 ? "#00ffff" : "#000e10",
+                  background: distance < 1 ? "#000e10" : "#000e10",
                   margin: "1px",
                   clipPath:
                     "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
