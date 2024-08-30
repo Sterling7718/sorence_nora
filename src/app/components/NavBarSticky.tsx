@@ -1,7 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const iconMap: { [key: string]: string } = {
   Home: "home",
@@ -33,11 +32,14 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
       className={linkClasses}
     >
       <span className="relative">
-        {isHovered && <span className="absolute top-0 -left-10">&lt;</span>}
+        {isHovered && <span className="absolute top-0 -left-8">&lt;</span>}
         {children}
-        {isHovered && <span className="absolute top-0 -right-7">/&gt;</span>}
+        {isHovered && <span className="absolute top-0 -right-5">/&gt;</span>}
         {iconName && (
-          <span className="material-symbols-outlined absolute top-1.5 left-[-25px]">
+          <span
+            className="material-symbols-outlined absolute left-[-20px] top-[2.5px]"
+            style={{ fontSize: "18px" }}
+          >
             {iconName}
           </span>
         )}
@@ -46,31 +48,34 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
   );
 };
 
-const NavBar = () => {
+const NavBarSticky = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0"
       />
-      <div className="flex items-center justify-between max-w-4xl mx-auto my-4 z-50">
-        {/* Logo Image */}
-        <div className="relative flex items-center">
-          {/* Box behind the image with background blur */}
-          <div className="absolute w-20 h-20 bg-bg rounded-lg backdrop-blur-[30px]"></div>
-
-          {/* Image */}
-          <Image
-            src="/logo.svg"
-            alt="Logo"
-            width={50}
-            height={50}
-            className="relative h-20 w-20 mr-6"
-          />
-        </div>
-
-        <nav className="flex-1 flex items-center justify-center font-sans rounded-[50px] backdrop-blur-[5px] pt-2 pb-3 font-semibold">
-          <div className="flex space-x-16 text-poppins1_5rem">
+      <div className="flex items-center justify-between max-w-2xl mx-auto my-4">
+        <nav className="flex-1 flex items-center justify-center font-sans rounded-[50px] bg-[#00FFFF] bg-opacity-5 backdrop-blur-[10px] pt-3 pb-3 font-semibold">
+          <div className="flex space-x-16 text-poppins1rem">
             {["Home", "Skills", "Projects", "Resume", "Contact"].map(
               (section, index) => (
                 <CustomNavLink key={index} link={`#${section.toLowerCase()}`}>
@@ -85,4 +90,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBarSticky;
