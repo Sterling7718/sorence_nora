@@ -47,7 +47,7 @@ const SkillSection = () => {
         >
           <h1 className="text-poppins1_5rem p-2">&lt;Design /&gt;</h1>
 
-          <div className=" flex flex-row justify-center w-[350px] items-center flex-wrap">
+          <div className=" flex flex-row justify-center w-[250px] items-center flex-wrap">
             <SkillCards
               src={"/techLogos/Photoshop.svg"}
               borderColor={"#31A8FF"}
