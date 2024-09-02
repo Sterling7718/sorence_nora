@@ -12,14 +12,14 @@ const ProjectsSection = () => {
           id="StudentClearanceMonitor"
           className="bg-forbentobg p-6 rounded-3xl w-[50rem]"
         >
-          <h1 className="text-subheadingpoppins2rem  p-4 text-center">
+          <h1 className="text-subheadingpoppins2rem  pt-4 pb-2 text-center">
             &lt;Student Clearance Monitor /&gt;
           </h1>
-          <div className=" flex flex-row justify-center items-center mt-4">
+          <div className=" flex flex-row justify-center items-center">
             <div id="samplePicsSlider">
               <PicsSlider />
             </div>
-            <div id="descriptions" className="mr-4">
+            <div id="descriptions" className="mr-6">
               <div className="  justify-center items-center">
                 <h2 className="text-poppins1_5rem">Description:</h2>
                 <p className="text-poppins1rem">
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
                   reflect it to other departments.
                 </p>
               </div>
-              <div className=" mt-6">
+              <div className=" my-6">
                 <h2 className="text-poppins1_5rem">Technologies:</h2>
                 <div
                   id="Technologies"
