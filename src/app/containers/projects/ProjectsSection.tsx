@@ -5,7 +5,7 @@ import TechCards from "./components/TechCards";
 
 const ProjectsSection = () => {
   return (
-    <main className="w-full h-auto flex flex-col items-center">
+    <main className="w-full h-auto flex flex-col items-center mb-6">
       <Header title={"My project"} />
       <div className="flex flex-row justify-center">
         <div
