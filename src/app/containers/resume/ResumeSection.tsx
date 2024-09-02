@@ -4,7 +4,7 @@ import React from "react";
 const ResumeSection = () => {
   return (
     <main className="w-full h-screen flex items-start justify-center">
-      <Header title={"About Me"} />
+      <Header title={"About me"} />
     </main>
   );
 };
