@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import { EffectCards } from "swiper/modules";
+import { EffectCards, Autoplay } from "swiper/modules"; // Import Autoplay module
 
 const images = [
   "/forProject_Section/scs.png",
@@ -19,9 +19,13 @@ const PicsSlider = () => {
       <Swiper
         effect="cards"
         grabCursor={true}
-        modules={[EffectCards]}
+        modules={[EffectCards, Autoplay]} // Include Autoplay module
         width={300}
         height={300}
+        autoplay={{
+          delay: 1000, // 1 seconds delay
+          disableOnInteraction: false, // Continue autoplay after interactions
+        }}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
