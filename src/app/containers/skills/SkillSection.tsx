@@ -11,7 +11,9 @@ const SkillSection = () => {
           id="WebDev"
           className="bg-forbentobg flex flex-col justify-center items-center py-7 px-2 rounded-3xl"
         >
-          <h1 className="text-poppins1_5rem p-2">&lt;WebDevelopment /&gt;</h1>
+          <h1 className="font-semibold text-poppins1_5rem p-2">
+            &lt;WebDevelopment /&gt;
+          </h1>
 
           <div className=" flex flex-row justify-center w-[350px] items-center flex-wrap">
             <SkillCards src={"/techLogos/Html5.svg"} borderColor={"#E34F26"} />
@@ -45,7 +47,9 @@ const SkillSection = () => {
           id="Design"
           className="bg-forbentobg flex flex-col justify-center items-center py-7 px-2 rounded-3xl m-6"
         >
-          <h1 className="text-poppins1_5rem p-2">&lt;Design /&gt;</h1>
+          <h1 className="font-semibold text-poppins1_5rem p-2">
+            &lt;Design /&gt;
+          </h1>
 
           <div className=" flex flex-row justify-center w-[250px] items-center flex-wrap">
             <SkillCards

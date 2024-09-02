@@ -12,7 +12,7 @@ const ProjectsSection = () => {
           id="StudentClearanceMonitor"
           className="bg-forbentobg p-6 rounded-3xl w-[50rem]"
         >
-          <h1 className="text-subheadingpoppins2rem  pt-4 pb-2 text-center">
+          <h1 className="text-subheadingpoppins2rem font-semibold pt-4 pb-2 text-center">
             &lt;Student Clearance Monitor /&gt;
           </h1>
           <div className=" flex flex-row justify-center items-center">
