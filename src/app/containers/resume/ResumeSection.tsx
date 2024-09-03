@@ -14,9 +14,11 @@ const ResumeSection = () => {
       <Header title={"About me"} />
       <div className="w-full h-auto flex flex-row items-center justify-center mb-24">
         {/* Adjusted to flex-col for vertical alignment */}
-        <h1 className="text-subheadingpoppins2rem font-semibold mr-16 text-center">
+        <h1 className="relative text-subheadingpoppins2rem font-bold mr-16 text-center z-10">
           &lt;Personal Info /&gt;
+          <span className="absolute bottom-3.5 left-1/2 w-full h-[4px] transform -translate-x-1/2 bg-[#003e3e] opacity-100 blur-[2px] shadow-[0_-5px_10px_#00FFFF] -z-10"></span>
         </h1>
+
         <div
           id="descriptions"
           className="bg-forbentobg p-7 rounded-3xl  w-fit flex flex-col items-center"
@@ -99,14 +101,16 @@ const ResumeSection = () => {
             </div>
           </div>
         </div>
-        <h1 className="text-subheadingpoppins2rem font-semibold ml-16 text-center">
+        <h1 className="relative text-subheadingpoppins2rem font-bold ml-16 text-center z-10">
           &lt;Education /&gt;
+          <span className="absolute bottom-3.5 left-1/2 w-full h-[4px] transform -translate-x-1/2 bg-[#003e3e] opacity-100 blur-[2px] shadow-[0_-5px_10px_#00FFFF] -z-10"></span>
         </h1>
       </div>
       <CircuitBorder flip={true} />
       <div className="w-full h-auto flex flex-row items-center justify-center my-24">
-        <h1 className="text-subheadingpoppins2rem font-semibold mr-16 text-center">
+        <h1 className="relative text-subheadingpoppins2rem font-bold mr-16 text-center z-10">
           &lt;Certificates /&gt;
+          <span className="absolute bottom-3.5 left-1/2 w-full h-[4px] transform -translate-x-1/2 bg-[#003e3e] opacity-100 blur-[2px] shadow-[0_-5px_10px_#00FFFF] -z-10"></span>
         </h1>
         <div
           id="Desc"
@@ -128,19 +132,19 @@ const ResumeSection = () => {
             </div>
             <div id="desc" className="ml-20 mb-6">
               <h4 className="text-poppins1rem font-medium ">
-                Java Fundamentals Oracle Academy <br />- Oracle Academy
+                JAVA FUNDAMENTALS ORACLE ACADEMY <br />- ORACLE ACADEMY
               </h4>
               <p className="text-poppins1rem ml-5  ">
-                AWARD of COURSE COMPLETION
+                Award of Course Completion
               </p>
             </div>
             <div id="desc" className="ml-20">
               <h4 className="text-poppins1rem font-medium ">
-                Systems Administration
+                SYSTEMS ADMINISTRATION
                 <br />- STI COLLEGE
               </h4>
               <p className="text-poppins1rem ml-5  ">
-                AWARD of COURSE COMPLETION
+                Award of Course Completion
               </p>
             </div>
           </div>
