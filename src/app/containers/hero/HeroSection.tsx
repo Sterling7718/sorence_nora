@@ -9,7 +9,7 @@ const HeroSection = () => {
         <div className="flex flex-row">
           <div className=" relative">
             <Image
-              src="/ForPortfolio.png"
+              src="/SNPic.png"
               alt="Sorence"
               width={480}
               height={480}
