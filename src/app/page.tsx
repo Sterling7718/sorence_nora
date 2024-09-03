@@ -8,6 +8,7 @@ import ResumeSection from "./containers/resume/ResumeSection";
 import ContactSection from "./containers/contact/ContactSection";
 import NavBar from "./components/NavBar";
 import NavBarSticky from "./components/NavBarSticky";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -66,8 +67,11 @@ export default function Home() {
       <div id="resume" className="">
         <ResumeSection />
       </div>
-      <div id="contact" className="border">
+      <div id="contact" className="">
         <ContactSection />
+      </div>
+      <div id="footer" className="">
+        <Footer />
       </div>
       <Background />
     </main>
