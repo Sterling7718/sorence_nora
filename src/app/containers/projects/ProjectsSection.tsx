@@ -23,10 +23,11 @@ const ProjectsSection = () => {
               <div className="  justify-center items-center">
                 <h2 className="text-poppins1_5rem">Description:</h2>
                 <p className="text-poppins1rem">
-                  This is part of my OJT project in STI College.
-                  <br />
+                  {" "}
                   This system manages to monitor students&apos; clearance and
                   reflect it to other departments.
+                  <br />
+                  This is part of my OJT project in STI College SJDM.
                 </p>
               </div>
               <div className=" my-6">

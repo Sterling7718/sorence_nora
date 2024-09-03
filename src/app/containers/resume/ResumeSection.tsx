@@ -106,7 +106,7 @@ const ResumeSection = () => {
       <CircuitBorder flip={true} />
       <div className="w-full h-auto flex flex-row items-center justify-center my-24">
         <h1 className="text-subheadingpoppins2rem font-semibold mr-16 text-center">
-          &lt;Education /&gt;
+          &lt;Certificates /&gt;
         </h1>
         <div
           id="Desc"
@@ -115,42 +115,32 @@ const ResumeSection = () => {
           <div id="2022-2024" className="text-start mb-5 w-[410px]">
             <div id="year" className="flex justify-start">
               <div className="bg-green-900 flex justify-center items-center w-10 h-10 rounded-full">
-                <span className="material-symbols-outlined">school</span>
+                <span className="material-symbols-outlined">
+                  workspace_premium
+                </span>
               </div>
               <h3 className="text-poppins1_5rem font-semibold mb-1 ml-1">
-                2022-2024
+                2023
               </h3>
               <div className="relative">
-                <div className="absolute top-[2.6rem] right-[8.7rem] bg-white w-0.5 h-20"></div>
+                <div className="absolute top-[2.6rem] right-[4.7rem] bg-white w-0.5 h-44"></div>
               </div>
             </div>
-            <div id="desc" className="ml-20">
+            <div id="desc" className="ml-20 mb-6">
               <h4 className="text-poppins1rem font-medium ">
-                ASSOCIATES IN COMPUTER TECHNOLOGY <br />- STI SAN JOSE DEL MONTE
-              </h4>
-              <p className="text-poppins1rem ml-5  ">2 years college program</p>
-            </div>
-          </div>
-
-          <div id="2022-2024" className="text-start mb-4 w-[410px]">
-            <div id="year" className="flex justify-start">
-              <div className="bg-green-900 flex justify-center items-center w-10 h-10 rounded-full">
-                <span className="material-symbols-outlined">school</span>
-              </div>
-              <h3 className="text-poppins1_5rem font-semibold mb-1 ml-1">
-                2020-2022
-              </h3>
-              <div className="relative">
-                <div className="absolute top-[2.6rem] right-[8.7rem] bg-white w-0.5 h-20"></div>
-              </div>
-            </div>
-            <div id="desc" className="ml-20">
-              <h4 className="text-poppins1rem font-medium ">
-                IT IN MOBILE APP AND WEB DEVELOPMENT
-                <br />- STI FAIRVIEW
+                Java Fundamentals Oracle Academy <br />- Oracle Academy
               </h4>
               <p className="text-poppins1rem ml-5  ">
-                Senior high school program (Grade 11 - 12)
+                AWARD of COURSE COMPLETION
+              </p>
+            </div>
+            <div id="desc" className="ml-20">
+              <h4 className="text-poppins1rem font-medium ">
+                Systems Administration
+                <br />- STI COLLEGE
+              </h4>
+              <p className="text-poppins1rem ml-5  ">
+                AWARD of COURSE COMPLETION
               </p>
             </div>
           </div>
