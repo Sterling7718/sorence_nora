@@ -57,13 +57,13 @@ export default function Home() {
         </div>
         <HeroSection />
       </div>
-      <div id="skills" className="border">
+      <div id="skills" className="">
         <SkillSection />
       </div>
-      <div id="projects" className="border">
+      <div id="projects" className="">
         <ProjectsSection />
       </div>
-      <div id="resume" className="border">
+      <div id="resume" className="">
         <ResumeSection />
       </div>
       <div id="contact" className="border">

@@ -1,6 +1,6 @@
 import Header from "@/app/components/Header";
 import React from "react";
-import CircuitBorder from "./CircuitBorder";
+import CircuitBorder from "./components/CircuitBorder";
 
 const ResumeSection = () => {
   return (
@@ -41,7 +41,7 @@ const ResumeSection = () => {
             href="https://drive.google.com/file/d/1_2AFU6mu0gYI23akwfE4JxWfK6lw1ITj/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300"
+            className="mt-4 bg-blue-500 text-foregroundparchment py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300"
           >
             View My Resume
           </a>
@@ -65,7 +65,7 @@ const ResumeSection = () => {
                 2022-2024
               </h3>
               <div className="relative">
-                <div className="absolute top-[2.6rem] right-[8.7rem] bg-white w-0.5 h-20"></div>
+                <div className="absolute top-[2.6rem] right-[8.7rem] bg-foregroundparchment w-0.5 h-20"></div>
               </div>
             </div>
             <div id="desc" className="ml-20">
@@ -85,7 +85,7 @@ const ResumeSection = () => {
                 2020-2022
               </h3>
               <div className="relative">
-                <div className="absolute top-[2.6rem] right-[8.7rem] bg-white w-0.5 h-20"></div>
+                <div className="absolute top-[2.6rem] right-[8.7rem] bg-foregroundparchment w-0.5 h-20"></div>
               </div>
             </div>
             <div id="desc" className="ml-20">
@@ -123,7 +123,7 @@ const ResumeSection = () => {
                 2023
               </h3>
               <div className="relative">
-                <div className="absolute top-[2.6rem] right-[4.7rem] bg-white w-0.5 h-44"></div>
+                <div className="absolute top-[2.6rem] right-[4.7rem] bg-foregroundparchment w-0.5 h-44"></div>
               </div>
             </div>
             <div id="desc" className="ml-20 mb-6">
