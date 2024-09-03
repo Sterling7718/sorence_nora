@@ -35,7 +35,7 @@ const Background = () => {
         width: "100%",
         top: 0,
         left: 0,
-        zIndex: -10, // Set z-index to ensure it's behind all other components
+        zIndex: -50, // Set z-index to ensure it's behind all other components
       }}
     >
       {[...Array(20)].map((_, rowIndex) => (

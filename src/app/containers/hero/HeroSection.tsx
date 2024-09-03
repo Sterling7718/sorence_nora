@@ -7,13 +7,20 @@ const HeroSection = () => {
       {/* The w-full and h-screen classes make the div cover the full screen */}
       <div className="flex items-center">
         <div className="flex flex-row">
-          <Image
-            src="/ForPortfolio.png"
-            alt="Sorence"
-            width={480}
-            height={480}
-            className=""
-          />
+          <div className=" relative">
+            <Image
+              src="/ForPortfolio.png"
+              alt="Sorence"
+              width={480}
+              height={480}
+              className="z-20"
+            />
+            <div
+              id="bgForPicture"
+              className=" absolute top-[103px] left-[56px] -z-10 bg-forbentobg w-[354px] h-[320px] rounded-full"
+            ></div>
+          </div>
+
           <div className=" -ml-60">
             <h1 className=" text-heroheading7rem font-heroheading7rem">
               Sorence
@@ -23,13 +30,6 @@ const HeroSection = () => {
             </h1>
           </div>
         </div>
-        <Image
-          src="/ForPortfolio1.png"
-          alt="Sorence"
-          width={480}
-          height={480}
-          className="absolute"
-        />
       </div>
     </main>
   );
