@@ -2,37 +2,52 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 const HeroSection = () => {
-  const [sliderValue, setSliderValue] = useState(50); // Initial slider value set to 50%
+  const [sliderValue, setSliderValue] = useState(50); // Initial slider value
+  const [isDragging, setIsDragging] = useState(false); // Track dragging
   const lineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (lineRef.current) {
+    let animationFrame: number;
+
+    const animateLine = () => {
+      if (!isDragging && lineRef.current) {
         const rect = lineRef.current.parentElement!.getBoundingClientRect();
-        let newLeft = e.clientX - rect.left; // Calculate new left position
-        let newSliderValue = (newLeft / rect.width) * 100; // Convert to percentage
-        newSliderValue = Math.max(0, Math.min(newSliderValue, 100)); // Clamp value between 0 and 100
+        let currentLeft = (sliderValue / 100) * rect.width;
+        let newLeft = (currentLeft + 2) % rect.width; // Incremental movement
+
+        let newSliderValue = (newLeft / rect.width) * 100;
         setSliderValue(newSliderValue); // Update slider value
+
+        animationFrame = requestAnimationFrame(animateLine); // Loop animation
       }
     };
 
-    const handleMouseUp = () => {
-      document.removeEventListener("mousemove", handleMouseMove); // Remove move listener on mouse up
-      document.removeEventListener("mouseup", handleMouseUp); // Remove up listener on mouse up
-    };
+    animationFrame = requestAnimationFrame(animateLine); // Start animation
 
+    return () => cancelAnimationFrame(animationFrame); // Cleanup
+  }, [isDragging, sliderValue]);
+
+  const handleMouseMove = (e: MouseEvent) => {
     if (lineRef.current) {
-      lineRef.current.addEventListener("mousedown", () => {
-        document.addEventListener("mousemove", handleMouseMove); // Add move listener
-        document.addEventListener("mouseup", handleMouseUp); // Add up listener
-      });
+      const rect = lineRef.current.parentElement!.getBoundingClientRect();
+      let newLeft = e.clientX - rect.left; // Calculate new left position
+      let newSliderValue = (newLeft / rect.width) * 100; // Convert to percentage
+      newSliderValue = Math.max(0, Math.min(newSliderValue, 100)); // Clamp between 0 and 100
+      setSliderValue(newSliderValue); // Update slider value
     }
+  };
 
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove); // Cleanup listeners
-      document.removeEventListener("mouseup", handleMouseUp); // Cleanup listeners
-    };
-  }, []);
+  const handleMouseUp = () => {
+    setIsDragging(false); // Stop dragging
+    document.removeEventListener("mousemove", handleMouseMove); // Remove listeners
+    document.removeEventListener("mouseup", handleMouseUp);
+  };
+
+  const handleMouseDown = () => {
+    setIsDragging(true); // Set dragging
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  };
 
   return (
     <main className="container z-10 mx-auto flex max-h-full w-full items-center justify-center">
@@ -43,9 +58,12 @@ const HeroSection = () => {
               <div className="relative h-[480px] w-[480px]">
                 <div
                   id="TransLine"
-                  ref={lineRef} // Reference for TransLine div
-                  className="absolute top-5 z-20 h-[26rem] w-1 cursor-pointer bg-foregroundlightcyan"
-                  style={{ left: `${sliderValue * 4.8}px` }} // Adjust the left position based on the slider value
+                  ref={lineRef}
+                  className={`absolute top-5 z-20 h-[26rem] w-1 cursor-pointer bg-foregroundlightcyan transition-transform duration-[5s] ${
+                    isDragging ? "" : "translate-x-full"
+                  }`}
+                  style={{ left: `${sliderValue * 4.7}px` }} // Adjust position
+                  onMouseDown={handleMouseDown} // Start drag
                 ></div>
                 <Image
                   id="SNPicCartoonize"
@@ -59,6 +77,7 @@ const HeroSection = () => {
                     userSelect: "none",
                     clipPath: `polygon(0 0, ${sliderValue}% 0, ${sliderValue}% 100%, 0 100%)`, // Clip based on slider value
                   }}
+                  onMouseDown={handleMouseDown} // Start drag
                 />
                 <Image
                   id="SNPic"
@@ -72,6 +91,7 @@ const HeroSection = () => {
                     userSelect: "none",
                     clipPath: `polygon(${sliderValue}% 0, 100% 0, 100% 100%, ${sliderValue}% 100%)`, // Clip based on reversed slider value
                   }}
+                  onMouseDown={handleMouseDown} // Start drag
                 />
               </div>
             </div>
