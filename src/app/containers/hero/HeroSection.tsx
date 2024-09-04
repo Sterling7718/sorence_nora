@@ -35,16 +35,16 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <main className="container mx-auto w-full z-10 max-h-full flex items-center justify-center">
+    <main className="container z-10 mx-auto flex max-h-full w-full items-center justify-center">
       <div className="flex items-center">
         <div className="flex flex-row">
           <div className="relative">
             <div className="items-center justify-center">
-              <div className="w-[480px] h-[480px] relative">
+              <div className="relative h-[480px] w-[480px]">
                 <div
                   id="TransLine"
                   ref={lineRef} // Reference for TransLine div
-                  className="absolute w-1 h-[26rem] top-5 bg-foregroundlightcyan z-20 cursor-pointer"
+                  className="absolute top-5 z-20 h-[26rem] w-1 cursor-pointer bg-foregroundlightcyan"
                   style={{ left: `${sliderValue * 4.8}px` }} // Adjust the left position based on the slider value
                 ></div>
                 <Image
@@ -77,7 +77,7 @@ const HeroSection = () => {
             </div>
             <div
               id="bgForPicture"
-              className="absolute top-[103px] left-[56px] -z-10 bg-forbentobg w-[354px] h-[320px] rounded-full"
+              className="absolute left-[56px] top-[103px] -z-10 h-[320px] w-[354px] rounded-full bg-forbentobg"
             ></div>
           </div>
 
@@ -85,7 +85,7 @@ const HeroSection = () => {
             <h1 className="text-heroheading7rem font-heroheading7rem">
               Sorence
             </h1>
-            <h1 className="text-heroheading7rem font-heroheading7rem -mt-16">
+            <h1 className="-mt-16 text-heroheading7rem font-heroheading7rem">
               Nora
             </h1>
           </div>

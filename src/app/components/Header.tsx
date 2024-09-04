@@ -6,10 +6,10 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
-    <header className=" flex justify-start mt-[71px] mb-2 ">
-      <h2 className="text-subheadingpoppins3rem font-bold relative z-10 inline-block">
+    <header className="mb-2 mt-[71px] flex justify-start">
+      <h2 className="relative z-10 inline-block text-subheadingpoppins3rem font-bold">
         {title}
-        <span className="absolute bottom-2 -z-10 left-1/2 w-full h-[4px] transform -translate-x-1/2 bg-[#00FFFF] opacity-100 blur-[1px] shadow-[0_-5px_10px_#00FFFF]"></span>
+        <span className="absolute bottom-2 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform bg-[#00FFFF] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[1px]"></span>
       </h2>
     </header>
   );

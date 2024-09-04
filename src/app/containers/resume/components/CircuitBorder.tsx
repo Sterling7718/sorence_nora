@@ -7,23 +7,23 @@ interface CircuitBorderProps {
 const CircuitBorder: React.FC<CircuitBorderProps> = ({ flip }) => {
   return (
     <div
-      className={` ${flip ? "relative scale-x-[-1] -left-0.5" : ""}`} // Conditionally adding 'scale-x-[-1]' class based on the 'flip' prop
+      className={` ${flip ? "relative -left-0.5 scale-x-[-1]" : ""}`} // Conditionally adding 'scale-x-[-1]' class based on the 'flip' prop
     >
       <div
         id="main"
-        className="z-10 relative h-[24px] w-[650px] flex items-center justify-center"
+        className="relative z-10 flex h-[24px] w-[650px] items-center justify-center"
       >
         {/* Horizontal line with circles */}
-        <div className="absolute -top-[170px] left-[54px] w-9 h-9 bg-foregroundlightcyan rounded-full flex items-center justify-center">
-          <div className="w-5 h-5 bg-bg rounded-full"></div>
-          <div className="absolute top-[29px] left-[10px] w-4 h-[160px] bg-foregroundlightcyan"></div>
+        <div className="absolute -top-[170px] left-[54px] flex h-9 w-9 items-center justify-center rounded-full bg-foregroundlightcyan">
+          <div className="h-5 w-5 rounded-full bg-bg"></div>
+          <div className="absolute left-[10px] top-[29px] h-[160px] w-4 bg-foregroundlightcyan"></div>
         </div>
 
-        <div className="w-[520px] h-4 bg-foregroundlightcyan flex items-center justify-center"></div>
+        <div className="flex h-4 w-[520px] items-center justify-center bg-foregroundlightcyan"></div>
 
-        <div className="absolute top-[165px] right-[55px] w-9 h-9 bg-foregroundlightcyan rounded-full flex items-center justify-center">
-          <div className="w-5 h-5 bg-bg rounded-full"></div>
-          <div className="absolute -top-[152px] left-[10px] w-4 h-[159px] bg-foregroundlightcyan"></div>
+        <div className="absolute right-[55px] top-[165px] flex h-9 w-9 items-center justify-center rounded-full bg-foregroundlightcyan">
+          <div className="h-5 w-5 rounded-full bg-bg"></div>
+          <div className="absolute -top-[152px] left-[10px] h-[159px] w-4 bg-foregroundlightcyan"></div>
         </div>
       </div>
     </div>

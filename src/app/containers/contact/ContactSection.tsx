@@ -3,37 +3,37 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <main className="w-full h-auto flex items-center justify-start flex-col mb-6">
+    <main className="mb-6 flex h-auto w-full flex-col items-center justify-start">
       <Header title={"Message me"} />
-      <form className=" p-7 rounded-3xl w-[30rem] h-auto flex flex-col items-center text-center justify-center space-y-4">
+      <form className="flex h-auto w-[30rem] flex-col items-center justify-center space-y-4 rounded-3xl p-7 text-center">
         {/* Name Input */}
         <input
           type="text"
           placeholder="Name"
-          className="w-full p-3 rounded-lg text-poppins1rem bg-forbentobg placeholder:text-gray-500"
+          className="w-full rounded-lg bg-forbentobg p-3 text-poppins1rem placeholder:text-gray-500"
         />
         {/* Flexbox layout with space between elements */}
         {/* Email Input */}
         <input
           type="text"
           placeholder="Email"
-          className="w-full p-3 rounded-lg text-poppins1rem bg-forbentobg placeholder:text-gray-500"
+          className="w-full rounded-lg bg-forbentobg p-3 text-poppins1rem placeholder:text-gray-500"
         />
         {/* Subject Input */}
         <input
           type="text"
           placeholder="Subject"
-          className="w-full p-3 rounded-lg text-poppins1rem bg-forbentobg placeholder:text-gray-500"
+          className="w-full rounded-lg bg-forbentobg p-3 text-poppins1rem placeholder:text-gray-500"
         />
         {/* Message Textarea */}
         <textarea
           placeholder="Message"
-          className="w-full p-3 rounded-lg text-poppins1rem bg-forbentobg placeholder:text-gray-500 h-32 resize-none"
+          className="h-32 w-full resize-none rounded-lg bg-forbentobg p-3 text-poppins1rem placeholder:text-gray-500"
         ></textarea>
         {/* Send Button */}
         <button
           type="submit"
-          className="mt-4 bg-blue-500 text-foregroundparchment py-2 px-7 rounded-full hover:bg-blue-700 transition duration-300"
+          className="mt-4 rounded-full bg-blue-500 px-7 py-2 text-foregroundparchment transition duration-300 hover:bg-blue-700"
         >
           Send
         </button>

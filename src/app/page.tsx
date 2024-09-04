@@ -28,7 +28,7 @@ export default function Home() {
       },
       {
         threshold: 0.4, // Adjust this value to control when the component should appear
-      }
+      },
     );
 
     if (targetRef.current) {
@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <main
       draggable="false" // Prevent image dragging
-      className=" text-foregroundparchment font-sans h-screen overflow-y-auto text-center z-10 relative w-full "
+      className="relative z-10 h-screen w-full overflow-y-auto text-center font-sans text-foregroundparchment"
       style={{ userSelect: "none" }}
     >
       {/* Changed overflow-hidden to overflow-y-auto to allow vertical scrolling */}
@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       )}
 
-      <div id="home" className="pt-1 h-screen">
+      <div id="home" className="h-screen pt-1">
         <div ref={targetRef}>
           <NavBar />
         </div>

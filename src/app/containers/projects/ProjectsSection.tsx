@@ -5,22 +5,22 @@ import TechCards from "./components/TechCards";
 
 const ProjectsSection = () => {
   return (
-    <main className="w-full h-auto flex flex-col items-center mb-6">
+    <main className="mb-6 flex h-auto w-full flex-col items-center">
       <Header title={"My project"} />
       <div className="flex flex-row justify-center">
         <div
           id="StudentClearanceMonitor"
-          className="bg-forbentobg p-6 rounded-3xl w-[50rem]"
+          className="w-[50rem] rounded-3xl bg-forbentobg p-6"
         >
-          <h1 className="text-subheadingpoppins2rem font-semibold pt-4 pb-2 text-center">
+          <h1 className="pb-2 pt-4 text-center text-subheadingpoppins2rem font-semibold">
             &lt;Student Clearance Monitor /&gt;
           </h1>
-          <div className=" flex flex-row justify-center items-center">
+          <div className="flex flex-row items-center justify-center">
             <div id="samplePicsSlider">
               <PicsSlider />
             </div>
             <div id="descriptions" className="mr-6">
-              <div className="  justify-center items-center">
+              <div className="items-center justify-center">
                 <h2 className="text-poppins1_5rem">Description:</h2>
                 <p className="text-poppins1rem">
                   {" "}
@@ -30,11 +30,11 @@ const ProjectsSection = () => {
                   This is part of my OJT project in STI College SJDM.
                 </p>
               </div>
-              <div className=" my-6">
+              <div className="my-6">
                 <h2 className="text-poppins1_5rem">Technologies:</h2>
                 <div
                   id="Technologies"
-                  className="bg-forbentobg flex flex-col flex-wrap justify-center items-center px-4 rounded-3xl"
+                  className="flex flex-col flex-wrap items-center justify-center rounded-3xl bg-forbentobg px-4"
                 >
                   <div className="flex flex-wrap justify-center">
                     <TechCards

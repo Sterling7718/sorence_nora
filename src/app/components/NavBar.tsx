@@ -33,11 +33,11 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
       className={linkClasses}
     >
       <span className="relative">
-        {isHovered && <span className="absolute top-0 -left-10">&lt;</span>}
+        {isHovered && <span className="absolute -left-10 top-0">&lt;</span>}
         {children}
-        {isHovered && <span className="absolute top-0 -right-7">/&gt;</span>}
+        {isHovered && <span className="absolute -right-7 top-0">/&gt;</span>}
         {iconName && (
-          <span className="material-symbols-outlined absolute top-1.5 left-[-25px]">
+          <span className="material-symbols-outlined absolute left-[-25px] top-1.5">
             {iconName}
           </span>
         )}
@@ -53,11 +53,11 @@ const NavBar = () => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0"
       />
-      <div className="flex items-center justify-between max-w-4xl mx-auto my-4 z-50">
+      <div className="z-50 mx-auto my-4 flex max-w-4xl items-center justify-between">
         {/* Logo Image */}
         <div className="relative flex items-center">
           {/* Box behind the image with background blur */}
-          <div className="absolute w-20 h-20 bg-bg rounded-lg backdrop-blur-[30px]"></div>
+          <div className="absolute h-20 w-20 rounded-lg bg-bg backdrop-blur-[30px]"></div>
 
           {/* Image */}
           <Image
@@ -65,18 +65,18 @@ const NavBar = () => {
             alt="Logo"
             width={50}
             height={50}
-            className="relative h-20 w-20 mr-6"
+            className="relative mr-6 h-20 w-20"
           />
         </div>
 
-        <nav className="flex-1 flex items-center justify-center font-sans rounded-[50px] backdrop-blur-[5px] pt-2 pb-3 font-semibold">
+        <nav className="flex flex-1 items-center justify-center rounded-[50px] pb-3 pt-2 font-sans font-semibold backdrop-blur-[5px]">
           <div className="flex space-x-16 text-poppins1_5rem">
             {["Home", "Skills", "Projects", "Resume", "Contact"].map(
               (section, index) => (
                 <CustomNavLink key={index} link={`#${section.toLowerCase()}`}>
                   {section}
                 </CustomNavLink>
-              )
+              ),
             )}
           </div>
         </nav>

@@ -9,7 +9,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ src, borderColor }) => {
   return (
     <div
-      className={`w-[95px] h-[110px] m-1 rounded-lg border-4 flex flex-col justify-center items-center`}
+      className={`m-1 flex h-[110px] w-[95px] flex-col items-center justify-center rounded-lg border-4`}
       style={{ borderColor: borderColor }}
     >
       <Image
