@@ -65,6 +65,7 @@ const HeroSection = () => {
                   style={{ left: `${sliderValue * 4.7}px` }} // Adjust position
                   onMouseDown={handleMouseDown} // Start drag
                 ></div>
+
                 <Image
                   id="SNPicCartoonize"
                   src="/SNPicCartoonize.png"
