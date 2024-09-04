@@ -14,7 +14,7 @@
     "incremental": true,
     "plugins": [
       {
-        "plugins": ["prettier-plugin-tailwindcss"]
+        "name": "next"
       }
     ],
     "paths": {
