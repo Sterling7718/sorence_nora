@@ -44,7 +44,7 @@ const HeroSection = () => {
                 <div
                   id="TransLine"
                   ref={lineRef} // Reference for TransLine div
-                  className="absolute w-2 h-[26rem] top-5 bg-slate-200 z-20 cursor-pointer"
+                  className="absolute w-2 h-[26rem] top-5 bg-foregroundlightcyan z-20 cursor-pointer"
                   style={{ left: `${sliderValue * 4.7}px` }} // Adjust the left position based on the slider value
                 ></div>
                 <Image

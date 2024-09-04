@@ -43,7 +43,11 @@ export default function Home() {
   }, []);
 
   return (
-    <main className=" text-foregroundparchment font-sans h-screen overflow-y-auto text-center z-10 relative w-full">
+    <main
+      draggable="false" // Prevent image dragging
+      className=" text-foregroundparchment font-sans h-screen overflow-y-auto text-center z-10 relative w-full "
+      style={{ userSelect: "none" }}
+    >
       {/* Changed overflow-hidden to overflow-y-auto to allow vertical scrolling */}
 
       {isVisible && (
