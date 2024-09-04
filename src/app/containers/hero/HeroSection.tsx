@@ -1,28 +1,88 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 const HeroSection = () => {
+  const [sliderValue, setSliderValue] = useState(50); // Initial slider value set to 50%
+  const lineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (lineRef.current) {
+        const rect = lineRef.current.parentElement!.getBoundingClientRect();
+        let newLeft = e.clientX - rect.left; // Calculate new left position
+        let newSliderValue = (newLeft / rect.width) * 100; // Convert to percentage
+        newSliderValue = Math.max(0, Math.min(newSliderValue, 100)); // Clamp value between 0 and 100
+        setSliderValue(newSliderValue); // Update slider value
+      }
+    };
+
+    const handleMouseUp = () => {
+      document.removeEventListener("mousemove", handleMouseMove); // Remove move listener on mouse up
+      document.removeEventListener("mouseup", handleMouseUp); // Remove up listener on mouse up
+    };
+
+    if (lineRef.current) {
+      lineRef.current.addEventListener("mousedown", () => {
+        document.addEventListener("mousemove", handleMouseMove); // Add move listener
+        document.addEventListener("mouseup", handleMouseUp); // Add up listener
+      });
+    }
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove); // Cleanup listeners
+      document.removeEventListener("mouseup", handleMouseUp); // Cleanup listeners
+    };
+  }, []);
+
   return (
     <main className="container mx-auto w-full z-10 max-h-full flex items-center justify-center">
-      {/* The w-full and h-screen classes make the div cover the full screen */}
       <div className="flex items-center">
         <div className="flex flex-row">
-          <div className=" relative">
-            <Image
-              src="/SNPic.png"
-              alt="Sorence"
-              width={480}
-              height={480}
-              className="z-20"
-            />
+          <div className="relative">
+            <div className="items-center justify-center">
+              <div className="w-[480px] h-[480px] relative">
+                <div
+                  id="TransLine"
+                  ref={lineRef} // Reference for TransLine div
+                  className="absolute w-2 h-[26rem] top-5 bg-slate-200 z-20 cursor-pointer"
+                  style={{ left: `${sliderValue * 4.7}px` }} // Adjust the left position based on the slider value
+                ></div>
+                <Image
+                  id="SNPicCartoonize"
+                  src="/SNPicCartoonize.png"
+                  alt="Sorence"
+                  width={480}
+                  height={480}
+                  draggable="false" // Prevent image dragging
+                  className="absolute"
+                  style={{
+                    userSelect: "none",
+                    clipPath: `polygon(0 0, ${sliderValue}% 0, ${sliderValue}% 100%, 0 100%)`, // Clip based on slider value
+                  }}
+                />
+                <Image
+                  id="SNPic"
+                  src="/SNPic.png"
+                  alt="Sorence"
+                  width={480}
+                  height={480}
+                  draggable="false" // Prevent image dragging
+                  className="absolute"
+                  style={{
+                    userSelect: "none",
+                    clipPath: `polygon(${sliderValue}% 0, 100% 0, 100% 100%, ${sliderValue}% 100%)`, // Clip based on reversed slider value
+                  }}
+                />
+              </div>
+            </div>
             <div
               id="bgForPicture"
-              className=" absolute top-[103px] left-[56px] -z-10 bg-forbentobg w-[354px] h-[320px] rounded-full"
+              className="absolute top-[103px] left-[56px] -z-10 bg-forbentobg w-[354px] h-[320px] rounded-full"
             ></div>
           </div>
 
-          <div className=" -ml-60">
-            <h1 className=" text-heroheading7rem font-heroheading7rem">
+          <div className="-ml-60">
+            <h1 className="text-heroheading7rem font-heroheading7rem">
               Sorence
             </h1>
             <h1 className="text-heroheading7rem font-heroheading7rem -mt-16">
