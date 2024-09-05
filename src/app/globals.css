@@ -7,6 +7,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@700&display=swap");
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgba(0, 14, 16, 1); /* bg */
   font-family: "Poppins", sans-serif;
