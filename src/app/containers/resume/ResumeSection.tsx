@@ -16,7 +16,7 @@ const ResumeSection = () => {
         {/* Adjusted to flex-col for vertical alignment */}
         <h1 className="relative z-10 mr-16 text-center text-subheadingpoppins2rem font-bold">
           &lt;Personal Info /&gt;
-          <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
+          <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
         </h1>
 
         <div
@@ -103,14 +103,14 @@ const ResumeSection = () => {
         </div>
         <h1 className="relative z-10 ml-16 text-center text-subheadingpoppins2rem font-bold">
           &lt;Education /&gt;
-          <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
+          <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
         </h1>
       </div>
       <CircuitBorder flip={true} />
       <div className="my-24 flex h-auto w-full flex-row items-center justify-center">
         <h1 className="relative z-10 mr-16 text-center text-subheadingpoppins2rem font-bold">
           &lt;Certificates /&gt;
-          <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
+          <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
         </h1>
         <div
           id="Desc"
