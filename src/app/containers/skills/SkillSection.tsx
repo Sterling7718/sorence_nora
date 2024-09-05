@@ -1,6 +1,6 @@
 import React from "react";
-import SkillCards from "./components/SkillCards";
 import Header from "@/app/components/Header";
+import SkillCards from "./components/SkillCards";
 
 const SkillSection = () => {
   return (
@@ -16,30 +16,51 @@ const SkillSection = () => {
           </h1>
 
           <div className="flex w-[350px] flex-row flex-wrap items-center justify-center">
-            <SkillCards src={"/techLogos/Html5.svg"} borderColor={"#E34F26"} />
-            <SkillCards src={"/techLogos/css.svg"} borderColor={"#264DE4"} />
+            <SkillCards
+              src={"/techLogos/Html5.svg"}
+              borderColor={"#E34F26"}
+              tooltipContent={"HTML"}
+            />
+            <SkillCards
+              src={"/techLogos/css.svg"}
+              borderColor={"#264DE4"}
+              tooltipContent={"CSS"}
+            />
             <SkillCards
               src={"/techLogos/Tailwind.svg"}
               borderColor={"#38BDF8"}
+              tooltipContent={"Tailwind"}
             />
             <SkillCards
               src={"/techLogos/JavaScript.svg"}
               borderColor={"#F7DF1E"}
+              tooltipContent={"JavaScript"}
             />
             <SkillCards
               src={"/techLogos/Typescript.svg"}
               borderColor={"#3178C6"}
+              tooltipContent={"Typescript"}
             />
-            <SkillCards src={"/techLogos/React.svg"} borderColor={"#61DAFB"} />
-            <SkillCards src={"/techLogos/Nextjs.svg"} borderColor={"#FFFFFF"} />
+            <SkillCards
+              src={"/techLogos/React.svg"}
+              borderColor={"#61DAFB"}
+              tooltipContent={"React"}
+            />
+            <SkillCards
+              src={"/techLogos/Nextjs.svg"}
+              borderColor={"#FFFFFF"}
+              tooltipContent={"Nextjs"}
+            />
 
             <SkillCards
               src={"/techLogos/Supabase.svg"}
               borderColor={"#3ECF8E"}
+              tooltipContent={"Supabase"}
             />
             <SkillCards
               src={"/techLogos/Postgresql.svg"}
               borderColor={"#336791"}
+              tooltipContent={"PostgreSQL"}
             />
           </div>
         </div>
@@ -55,8 +76,13 @@ const SkillSection = () => {
             <SkillCards
               src={"/techLogos/Photoshop.svg"}
               borderColor={"#31A8FF"}
+              tooltipContent={"Photoshop"}
             />
-            <SkillCards src={"/techLogos/figma.svg"} borderColor={"#A259FF"} />
+            <SkillCards
+              src={"/techLogos/figma.svg"}
+              borderColor={"#A259FF"}
+              tooltipContent={"Figma"}
+            />
           </div>
         </div>
       </div>
