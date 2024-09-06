@@ -53,7 +53,7 @@ const HeroSection = () => {
     <main className="container z-10 mx-auto flex max-h-full w-full items-center justify-center">
       <div className="flex flex-row items-center max-sm:flex-col">
         <div className="relative">
-          <div className="relative -top-[55px] z-10 h-[480px] w-[480px] scale-50 items-center justify-center sm:scale-[97rem]">
+          <div className="relative -top-[3.4rem] z-10 h-[480px] w-[480px] scale-50 items-center justify-center sm:scale-[97rem] md:-top-[20px]">
             {/* Scale down for small screens */}
             <div
               id="TransLine"
@@ -93,7 +93,7 @@ const HeroSection = () => {
           </div>
           <div
             id="bgForPicture"
-            className="absolute left-[60px] top-[34px] -z-10 h-[324px] w-[354px] scale-50 rounded-full bg-forbentobg sm:scale-[97rem] md:left-[56px] md:top-[55px] md:h-[320px] md:w-[354px]"
+            className="absolute left-[60px] top-[34px] -z-10 h-[324px] w-[354px] scale-50 rounded-full bg-forbentobg sm:scale-[97rem] md:left-[56px] md:top-[5rem] md:h-[320px] md:w-[354px]"
           ></div>{" "}
           {/* Scale down the background for small screens */}
         </div>
