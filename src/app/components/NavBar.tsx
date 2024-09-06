@@ -33,9 +33,13 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
       className={linkClasses}
     >
       <span className="relative">
-        {isHovered && <span className="absolute -left-10 top-0">&lt;</span>}
+        {isHovered && (
+          <span className="absolute -left-10 top-0 hidden md:block">&lt;</span>
+        )}
         {children}
-        {isHovered && <span className="absolute -right-7 top-0">/&gt;</span>}
+        {isHovered && (
+          <span className="absolute -right-7 top-0 hidden md:block">/&gt;</span>
+        )}
         {iconName && (
           <span className="material-symbols-outlined absolute left-[-25px] top-1.5">
             {iconName}
@@ -70,7 +74,7 @@ const NavBar = () => {
         </div>
 
         <nav className="flex flex-1 items-center justify-center rounded-[50px] pb-3 pt-2 font-sans font-semibold backdrop-blur-[5px]">
-          <div className="flex space-x-16 text-poppins1_5rem">
+          <div className="flex text-poppins1_5rem md:space-x-16">
             {["Home", "Skills", "Projects", "Resume", "Contact"].map(
               (section, index) => (
                 <CustomNavLink key={index} link={`#${section.toLowerCase()}`}>
