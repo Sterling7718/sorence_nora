@@ -24,11 +24,11 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
   }`;
 
   const leftArrow = isHovered && (
-    <span className="-left-3 top-0 hidden md:absolute">&lt;</span>
+    <span className="absolute -left-3 top-0 hidden md:block">&lt;</span>
   );
 
   const rightArrow = isHovered && (
-    <span className="absolute -right-6 top-0 hidden md:absolute">/&gt;</span>
+    <span className="absolute -right-6 top-0 hidden md:block">/&gt;</span>
   );
 
   const iconName = iconMap[children as string];
@@ -42,9 +42,9 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
     >
       <span className="relative flex flex-row items-center">
         {leftArrow}
-        <span className="material-symbols-outlined block max-sm:h-10 max-sm:w-10">
+        <span className="material-symbols-outlined block max-sm:h-6 max-sm:w-6">
           {iconName}
-        </span>
+        </span>{" "}
         {/* Always show icon */}
         <span className={`hidden md:inline`}>{children}</span>{" "}
         {/* Hide text on smaller screens */}
@@ -80,7 +80,7 @@ const NavBar = () => {
         </div>
 
         <nav className="fixed bottom-0 left-0 z-50 flex w-full flex-1 items-center justify-center rounded-[50px] pb-3 pt-2 font-sans font-semibold backdrop-blur-[5px] md:static md:w-auto md:px-5 md:py-3">
-          <div className="flex space-x-4 text-sm md:space-x-16 md:text-xl">
+          <div className="flex space-x-4 text-sm md:space-x-8 md:text-xl lg:space-x-16">
             {["Home", "Skills", "Projects", "Resume", "Contact"].map(
               (section, index) => (
                 <CustomNavLink key={index} link={`#${section.toLowerCase()}`}>
