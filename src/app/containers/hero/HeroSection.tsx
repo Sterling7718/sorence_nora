@@ -53,7 +53,7 @@ const HeroSection = () => {
     <main className="container z-10 mx-auto flex max-h-full w-full items-center justify-center">
       <div className="flex flex-row items-center max-sm:flex-col">
         <div className="relative">
-          <div className="relative -top-[3.4rem] z-10 h-[480px] w-[480px] scale-50 items-center justify-center sm:scale-[97rem] md:-top-[20px]">
+          <div className="relative -top-[6rem] z-10 h-[480px] w-[480px] scale-50 items-center justify-center sm:scale-[97rem] md:-top-[20px]">
             {/* Scale down for small screens */}
             <div
               id="TransLine"
@@ -93,22 +93,26 @@ const HeroSection = () => {
           </div>
           <div
             id="bgForPicture"
-            className="absolute left-[60px] top-[34px] -z-10 h-[324px] w-[354px] scale-50 rounded-full bg-forbentobg sm:scale-[97rem] md:left-[56px] md:top-[5rem] md:h-[320px] md:w-[354px]"
+            className="absolute -top-[0.5rem] left-[60px] -z-10 h-[324px] w-[354px] scale-50 rounded-full bg-forbentobg sm:scale-[97rem] md:left-[56px] md:top-[5rem] md:h-[320px] md:w-[354px]"
           ></div>{" "}
           {/* Scale down the background for small screens */}
         </div>
 
-        <div className="-mt-[16rem] flex scale-50 flex-col sm:scale-100 md:-ml-[14rem] md:-mt-[10rem]">
-          <h4 className="-z-10 ml-[5rem] text-left font-bold">Hi! I&apos;am</h4>
+        <div className="-mt-[20rem] flex scale-50 flex-col sm:scale-100 md:-ml-[14rem] md:-mt-[10rem]">
+          <h4 className="-z-10 ml-[6rem] text-left text-[1.5rem] font-bold">
+            Hi! I&apos;am
+          </h4>
           <h1 className="-mt-16 text-heroheading7rem font-heroheading7rem">
             Sorence
           </h1>
           <h1 className="-mt-[5rem] ml-5 text-heroheading7rem font-heroheading7rem">
             Nora
           </h1>
-          <h4 className="-mt-6 space-x-1 pl-[9rem] text-left font-bold">
-            a frontend web developer specializing <br />
-            in building modern and responsive <br /> web applications.
+          <h4 className="-mt-6 flex flex-wrap justify-center space-x-1 text-center text-[2rem] font-bold md:pl-[9rem] md:text-start md:text-[1rem]">
+            a frontend web developer specializing{" "}
+            <br className="hidden md:block" />
+            in building modern and responsive <br className="hidden md:block" />
+            web applications.
           </h4>
         </div>
       </div>
