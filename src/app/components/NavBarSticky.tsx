@@ -73,7 +73,7 @@ const NavBarSticky = () => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
       />
-      <div className="mx-auto my-4 flex max-w-2xl items-center justify-between rounded-[50px] border-[1px] border-[#00FFFF]">
+      <div className="mx-auto my-4 hidden max-w-2xl items-center justify-between rounded-[50px] border-[1px] border-[#00FFFF] md:flex">
         <nav className="flex flex-1 items-center justify-center rounded-[50px] bg-[#00FFFF] bg-opacity-5 pb-3 pt-3 font-sans font-semibold backdrop-blur-[5px]">
           <div className="flex space-x-16 text-poppins1rem">
             {["Home", "Skills", "Projects", "Resume", "Contact"].map(

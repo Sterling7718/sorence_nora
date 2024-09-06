@@ -23,6 +23,14 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
       : "text-foregroundlightcyan opacity-30"
   }`;
 
+  const leftArrow = isHovered && (
+    <span className="-left-3 top-0 hidden md:absolute">&lt;</span>
+  );
+
+  const rightArrow = isHovered && (
+    <span className="absolute -right-6 top-0 hidden md:absolute">/&gt;</span>
+  );
+
   const iconName = iconMap[children as string];
 
   return (
@@ -32,19 +40,15 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
       onMouseLeave={() => setIsHovered(false)}
       className={linkClasses}
     >
-      <span className="relative">
-        {isHovered && (
-          <span className="absolute -left-10 top-0 hidden md:block">&lt;</span>
-        )}
-        {children}
-        {isHovered && (
-          <span className="absolute -right-7 top-0 hidden md:block">/&gt;</span>
-        )}
-        {iconName && (
-          <span className="material-symbols-outlined absolute left-[-25px] top-1.5">
-            {iconName}
-          </span>
-        )}
+      <span className="relative flex flex-row items-center">
+        {leftArrow}
+        <span className="material-symbols-outlined block max-sm:h-6 max-sm:w-6">
+          {iconName}
+        </span>{" "}
+        {/* Always show icon */}
+        <span className={`hidden md:inline`}>{children}</span>{" "}
+        {/* Hide text on smaller screens */}
+        {rightArrow}
       </span>
     </Link>
   );
@@ -57,24 +61,26 @@ const NavBar = () => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0"
       />
-      <div className="z-50 mx-auto my-4 flex max-w-4xl items-center justify-between">
+      <div className="mx-auto my-4 flex max-w-4xl items-center justify-between">
         {/* Logo Image */}
-        <div className="relative flex items-center">
-          {/* Box behind the image with background blur */}
-          <div className="absolute h-20 w-20 rounded-lg bg-bg backdrop-blur-[30px]"></div>
+        <div className="hidden md:block md:px-4 lg:p-0">
+          <div className="relative flex items-center">
+            {/* Box behind the image with background blur */}
+            <div className="absolute h-20 w-20 rounded-lg bg-bg backdrop-blur-[30px]"></div>
 
-          {/* Image */}
-          <Image
-            src="/logo.svg"
-            alt="Logo"
-            width={50}
-            height={50}
-            className="relative mr-6 h-20 w-20"
-          />
+            {/* Image */}
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={50}
+              height={50}
+              className="relative mr-6 h-20 w-20"
+            />
+          </div>
         </div>
 
-        <nav className="flex flex-1 items-center justify-center rounded-[50px] pb-3 pt-2 font-sans font-semibold backdrop-blur-[5px]">
-          <div className="flex text-poppins1_5rem md:space-x-16">
+        <nav className="fixed bottom-0 left-0 z-50 flex w-full flex-1 items-center justify-center rounded-[50px] pb-3 pt-2 font-sans font-semibold backdrop-blur-[5px] md:static md:w-auto md:px-5 md:py-3">
+          <div className="flex space-x-4 text-sm md:space-x-16 md:text-xl">
             {["Home", "Skills", "Projects", "Resume", "Contact"].map(
               (section, index) => (
                 <CustomNavLink key={index} link={`#${section.toLowerCase()}`}>
