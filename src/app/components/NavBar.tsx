@@ -42,9 +42,9 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
     >
       <span className="relative flex flex-row items-center">
         {leftArrow}
-        <span className="material-symbols-outlined block max-sm:h-6 max-sm:w-6">
+        <span className="material-symbols-outlined block max-sm:h-8 max-sm:w-8">
           {iconName}
-        </span>{" "}
+        </span>
         {/* Always show icon */}
         <span className={`hidden md:inline`}>{children}</span>{" "}
         {/* Hide text on smaller screens */}
