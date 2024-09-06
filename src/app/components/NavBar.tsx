@@ -42,7 +42,7 @@ const CustomNavLink: React.FC<{ link: string; children: React.ReactNode }> = ({
     >
       <span className="relative flex flex-row items-center">
         {leftArrow}
-        <span className="material-symbols-outlined block max-sm:h-8 max-sm:w-8">
+        <span className="material-symbols-outlined block max-sm:h-10 max-sm:w-10">
           {iconName}
         </span>
         {/* Always show icon */}
