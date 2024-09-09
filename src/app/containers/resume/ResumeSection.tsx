@@ -14,7 +14,7 @@ const ResumeSection = () => {
       <Header title={"About me"} />
 
       {/* Personal Info */}
-      <div className="mb-24 flex h-auto w-full flex-row items-center justify-center">
+      <div className="my-3 flex h-auto w-full flex-row items-center justify-center md:mb-24">
         <h1 className="z-10 mr-16 text-center text-[1.3rem] font-bold max-sm:hidden md:relative lg:text-subheadingpoppins2rem">
           &lt;Personal Info /&gt;
           <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
@@ -25,7 +25,7 @@ const ResumeSection = () => {
         >
           <h1 className="relative mb-2 mr-16 text-center text-[1rem] font-bold md:hidden">
             &lt;Personal Info /&gt;
-            <span className="absolute bottom-1 left-1/2 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#21ffff] blur-[2px]"></span>
+            <span className="absolute bottom-1 left-1/2 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#21ffff] blur-[2px]" />
           </h1>
           <div className="flex w-[14rem] justify-center text-center md:w-[28rem]">
             <div className="grid w-[13rem] grid-cols-2 text-left text-[0.5rem] md:w-[26rem] md:gap-x-[1px] md:text-poppins1rem">
@@ -47,7 +47,7 @@ const ResumeSection = () => {
             href="https://drive.google.com/file/d/1_2AFU6mu0gYI23akwfE4JxWfK6lw1ITj/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 rounded-full bg-blue-500 px-4 py-2 text-foregroundparchment transition duration-300 hover:bg-blue-700 max-sm:scale-50"
+            className="rounded-full bg-blue-500 px-4 py-2 text-foregroundparchment transition duration-300 hover:bg-blue-700 max-sm:scale-50 md:mt-4"
           >
             View My Resume
           </a>
@@ -58,13 +58,20 @@ const ResumeSection = () => {
       {/* Education */}
       <div
         id="TitleAndDesc"
-        className="my-24 flex h-auto w-full flex-row items-center justify-center"
+        className="my-3 flex h-auto w-full flex-row items-center justify-center md:my-24"
       >
         <div
           id="TitleAndDesc"
-          className="flex h-[20rem] w-[30rem] flex-col items-center justify-center rounded-3xl bg-forbentobg p-7 text-center"
+          className="flex h-fit w-[17rem] flex-col items-center justify-center rounded-3xl bg-forbentobg p-7 text-center md:h-[20rem] md:w-[30rem]"
         >
-          <div id="2022-2024" className="mb-5 w-[410px] text-start">
+          <h1 className="relative mr-16 text-center text-[1rem] font-bold md:hidden">
+            &lt;Education /&gt;
+            <span className="absolute bottom-1 left-1/2 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#21ffff] blur-[2px]" />
+          </h1>
+          <div
+            id="2022-2024"
+            className="w-[26rem] text-start max-sm:-m-5 max-sm:scale-50 md:mb-5"
+          >
             <div id="year" className="flex justify-start">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-900">
                 <span className="material-symbols-outlined">school</span>
@@ -84,7 +91,10 @@ const ResumeSection = () => {
             </div>
           </div>
 
-          <div id="2022-2024" className="mb-4 w-[410px] text-start">
+          <div
+            id="2022-2024"
+            className="w-[26rem] text-start max-sm:-m-5 max-sm:scale-50 md:mb-5"
+          >
             <div id="year" className="flex justify-start">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-900">
                 <span className="material-symbols-outlined">school</span>
@@ -102,12 +112,12 @@ const ResumeSection = () => {
                 <br />- STI FAIRVIEW
               </h4>
               <p className="ml-5 text-poppins1rem">
-                Senior high school program (Grade 11 - 12)
+                Senior high school program (Grade 11-12)
               </p>
             </div>
           </div>
         </div>
-        <h1 className="relative z-10 ml-16 text-center text-[1.3rem] font-bold lg:text-subheadingpoppins2rem">
+        <h1 className="z-10 ml-16 text-center text-[1.3rem] font-bold max-sm:hidden md:relative lg:text-subheadingpoppins2rem">
           &lt;Education /&gt;
           <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
         </h1>
@@ -115,16 +125,24 @@ const ResumeSection = () => {
       <CircuitBorder flip={true} />
 
       {/* Certificates */}
-      <div className="my-24 flex h-auto w-full flex-row items-center justify-center">
-        <h1 className="relative z-10 mr-16 text-center text-[1.3rem] font-bold lg:text-subheadingpoppins2rem">
+      <div className="my-3 flex h-auto w-full flex-row items-center justify-center md:my-24">
+        <h1 className="z-10 mr-16 text-center text-[1.3rem] font-bold max-sm:hidden md:relative lg:text-subheadingpoppins2rem">
           &lt;Certificates /&gt;
           <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
         </h1>
         <div
           id="Desc"
-          className="flex h-[20rem] w-[30rem] flex-col items-center justify-center rounded-3xl bg-forbentobg p-7 text-center"
+          className="flex h-fit w-[17rem] flex-col items-center justify-center rounded-3xl bg-forbentobg p-7 text-center md:h-[20rem] md:w-[30rem]"
         >
-          <div id="2022-2024" className="mb-5 w-[410px] text-start">
+          <h1 className="relative mr-16 text-center text-[1rem] font-bold md:hidden">
+            &lt;Certificates /&gt;
+            <span className="absolute bottom-1 left-1/2 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#21ffff] blur-[2px]" />
+          </h1>
+
+          <div
+            id="2022-2024"
+            className="mb-5 w-[410px] text-start max-sm:-m-10 max-sm:scale-50"
+          >
             <div id="year" className="flex justify-start">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-900">
                 <span className="material-symbols-outlined">
