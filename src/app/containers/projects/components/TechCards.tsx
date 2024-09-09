@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({ src, borderColor, tooltipContent }) => {
           borderColor: `var(--border-color)`, // Applying the custom CSS variable to the border color
         } as React.CSSProperties // Casting to React.CSSProperties to allow custom CSS variables
       }
-      className={`m-1 flex h-[45px] w-[30px] flex-col items-center justify-center rounded-lg border-4 transition-all duration-300 hover:-skew-x-6 hover:skew-y-3 hover:[filter:var(--drop-shadow)] md:h-[65px] md:w-[50px]`}
+      className={`m-1 flex h-[50px] w-[40px] flex-col items-center justify-center rounded-lg border-4 transition-all duration-300 hover:-skew-x-6 hover:skew-y-3 hover:[filter:var(--drop-shadow)] md:h-[65px] md:w-[50px]`}
     >
       <div className="transition-all duration-300 hover:[filter:var(--drop-shadow)]">
         <div className="hidden md:block">
