@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({ src, borderColor, tooltipContent }) => {
           borderColor: `var(--border-color)`, // Applying the custom CSS variable to the border color
         } as React.CSSProperties // Casting to React.CSSProperties to allow custom CSS variables
       }
-      className={`m-1 flex h-[110px] w-[95px] flex-col items-center justify-center rounded-lg border-4 transition-all duration-300 hover:-skew-x-6 hover:skew-y-3 hover:[filter:var(--drop-shadow)]`}
+      className={`m-1 flex h-14 w-12 flex-col items-center justify-center rounded-lg border-4 transition-all duration-300 hover:-skew-x-6 hover:skew-y-3 hover:[filter:var(--drop-shadow)] md:h-[110px] md:w-[95px]`}
     >
       <div
       // Tailwind CSS classes for layout, size, border, and hover effect
@@ -33,7 +33,7 @@ const Card: React.FC<CardProps> = ({ src, borderColor, tooltipContent }) => {
               width={50}
               height={50}
               alt="Image"
-              className="rounded-lg transition-all duration-300 hover:-skew-x-6 hover:skew-y-3 hover:animate-pulse"
+              className="h-5 rounded-lg transition-all duration-300 hover:-skew-x-6 hover:skew-y-3 hover:animate-pulse md:h-12"
             />
           </Tooltip>
         </div>

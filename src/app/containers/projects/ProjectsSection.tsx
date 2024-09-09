@@ -10,20 +10,18 @@ const ProjectsSection = () => {
       <div className="flex flex-row justify-center">
         <div
           id="StudentClearanceMonitor"
-          className="w-[50rem] rounded-3xl bg-forbentobg p-6"
+          className="w-[18rem] rounded-3xl bg-forbentobg p-6 md:w-[50rem]"
         >
-          <h1 className="pb-2 pt-4 text-center text-subheadingpoppins2rem font-semibold">
+          <h1 className="mb-2 pb-2 pt-4 text-center text-[1rem] font-semibold md:text-subheadingpoppins2rem">
             &lt;Student Clearance Monitor /&gt;
           </h1>
-          <div className="flex flex-row items-center justify-center">
+          <div className="flex flex-col items-center justify-center md:flex-row">
             <div id="samplePicsSlider">
               <PicsSlider />
             </div>
-            <div id="descriptions" className="mr-6">
+            <div id="descriptions" className="mt-2 md:mr-6">
               <div className="items-center justify-center">
-                <h2 className="text-poppins1_5rem">Description:</h2>
-                <p className="text-poppins1rem">
-                  {" "}
+                <p className="text-[0.8rem] md:text-poppins1rem">
                   This system manages to monitor students&apos; clearance and
                   reflect it to other departments.
                   <br />
@@ -31,7 +29,9 @@ const ProjectsSection = () => {
                 </p>
               </div>
               <div className="my-6">
-                <h2 className="text-poppins1_5rem">Technologies:</h2>
+                <h2 className="text-[1rem] md:text-poppins1_5rem">
+                  Technologies:
+                </h2>
                 <div
                   id="Technologies"
                   className="flex flex-col flex-wrap items-center justify-center rounded-3xl bg-forbentobg px-4"

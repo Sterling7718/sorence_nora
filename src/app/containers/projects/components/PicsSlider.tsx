@@ -15,29 +15,56 @@ const images = [
 
 const PicsSlider = () => {
   return (
-    <div className="w-[30rem] pl-12 -mr-12">
-      <Swiper
-        effect="cards"
-        grabCursor={true}
-        modules={[EffectCards, Autoplay]} // Include Autoplay module
-        width={300}
-        height={300}
-        autoplay={{
-          delay: 1000, // 1 seconds delay
-          disableOnInteraction: false, // Continue autoplay after interactions
-        }}
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <Image
-              src={image}
-              alt={`Slide ${index + 1}`}
-              width={300}
-              height={300}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className="-mr-12 h-[6rem] w-[10rem] pl-12 md:w-[30rem]">
+      <div className="-ml-6 -mt-28 hidden md:block">
+        <Swiper
+          effect="cards"
+          grabCursor={true}
+          modules={[EffectCards, Autoplay]} // Include Autoplay module
+          width={350}
+          height={350}
+          autoplay={{
+            delay: 1000, // 1 seconds delay
+            disableOnInteraction: false, // Continue autoplay after interactions
+          }}
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <Image
+                src={image}
+                alt={`Slide ${index + 1}`}
+                width={350}
+                height={350}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      <div className="-ml-16 block md:hidden">
+        <Swiper
+          effect="cards"
+          grabCursor={true}
+          modules={[EffectCards, Autoplay]} // Include Autoplay module
+          width={150}
+          height={150}
+          autoplay={{
+            delay: 1000, // 1 seconds delay
+            disableOnInteraction: false, // Continue autoplay after interactions
+          }}
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <Image
+                src={image}
+                alt={`Slide ${index + 1}`}
+                width={150}
+                height={150}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };

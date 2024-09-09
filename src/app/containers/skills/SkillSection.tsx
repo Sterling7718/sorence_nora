@@ -6,16 +6,16 @@ const SkillSection = () => {
   return (
     <main className="mb-6 flex h-auto w-full flex-col items-center justify-center">
       <Header title={"My TechStack and Skills"} />
-      <div className="flex flex-row items-center justify-center">
+      <div className="m-3 flex flex-col items-center justify-center md:flex-row">
         <div
           id="WebDev"
           className="flex flex-col items-center justify-center rounded-3xl bg-forbentobg px-2 py-7"
         >
-          <h1 className="p-2 text-poppins1_5rem font-semibold">
+          <h1 className="p-2 text-[1rem] font-semibold md:text-poppins1_5rem">
             &lt;WebDevelopment /&gt;
           </h1>
 
-          <div className="flex w-[350px] flex-row flex-wrap items-center justify-center">
+          <div className="flex w-[220px] flex-row flex-wrap items-center justify-center md:w-[350px]">
             <SkillCards
               src={"/techLogos/Html5.svg"}
               borderColor={"#E34F26"}
@@ -68,11 +68,11 @@ const SkillSection = () => {
           id="Design"
           className="m-6 flex flex-col items-center justify-center rounded-3xl bg-forbentobg px-2 py-7"
         >
-          <h1 className="p-2 text-poppins1_5rem font-semibold">
+          <h1 className="p-2 text-[1rem] font-semibold md:text-poppins1_5rem">
             &lt;Design /&gt;
           </h1>
 
-          <div className="flex w-[250px] flex-row flex-wrap items-center justify-center">
+          <div className="flex w-[220px] flex-row flex-wrap items-center justify-center md:w-[330px]">
             <SkillCards
               src={"/techLogos/Photoshop.svg"}
               borderColor={"#31A8FF"}
