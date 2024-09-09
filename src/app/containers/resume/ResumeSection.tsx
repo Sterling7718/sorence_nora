@@ -4,27 +4,31 @@ import CircuitBorder from "./components/CircuitBorder";
 
 const ResumeSection = () => {
   return (
-    <main className="mb-6 flex h-auto w-full flex-col items-center justify-center">
+    <main className="mb-6 flex h-auto w-full flex-col flex-wrap items-center justify-center border">
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0"
       />
 
-      {/* Centered the entire main content */}
+      {/* Header */}
       <Header title={"About me"} />
+
+      {/* Personal Info */}
       <div className="mb-24 flex h-auto w-full flex-row items-center justify-center">
-        {/* Adjusted to flex-col for vertical alignment */}
-        <h1 className="relative z-10 mr-16 text-center text-subheadingpoppins2rem font-bold">
+        <h1 className="z-10 mr-16 text-center text-[1.3rem] font-bold max-sm:hidden md:relative lg:text-subheadingpoppins2rem">
           &lt;Personal Info /&gt;
           <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
         </h1>
-
         <div
           id="descriptions"
-          className="flex w-fit flex-col items-center rounded-3xl bg-forbentobg p-7"
+          className="flex flex-col items-center rounded-3xl bg-forbentobg p-7"
         >
-          <div className="flex w-[28rem] justify-center text-center">
-            <div className="grid w-[26rem] grid-cols-2 gap-x-[1px] text-left text-poppins1rem">
+          <h1 className="relative mb-2 mr-16 text-center text-[1rem] font-bold md:hidden">
+            &lt;Personal Info /&gt;
+            <span className="absolute bottom-1 left-1/2 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#21ffff] blur-[2px]"></span>
+          </h1>
+          <div className="flex w-[14rem] justify-center text-center md:w-[28rem]">
+            <div className="grid w-[13rem] grid-cols-2 text-left text-[0.5rem] md:w-[26rem] md:gap-x-[1px] md:text-poppins1rem">
               <p>FirstName</p>
               <p>= Sorence</p>
               <p>LastName</p>
@@ -43,13 +47,15 @@ const ResumeSection = () => {
             href="https://drive.google.com/file/d/1_2AFU6mu0gYI23akwfE4JxWfK6lw1ITj/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 rounded-full bg-blue-500 px-4 py-2 text-foregroundparchment transition duration-300 hover:bg-blue-700"
+            className="mt-4 rounded-full bg-blue-500 px-4 py-2 text-foregroundparchment transition duration-300 hover:bg-blue-700 max-sm:scale-75"
           >
             View My Resume
           </a>
         </div>
       </div>
       <CircuitBorder flip={false} />
+
+      {/* Education */}
       <div
         id="TitleAndDesc"
         className="my-24 flex h-auto w-full flex-row items-center justify-center"
@@ -101,14 +107,16 @@ const ResumeSection = () => {
             </div>
           </div>
         </div>
-        <h1 className="relative z-10 ml-16 text-center text-subheadingpoppins2rem font-bold">
+        <h1 className="relative z-10 ml-16 text-center text-[1.3rem] font-bold lg:text-subheadingpoppins2rem">
           &lt;Education /&gt;
           <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
         </h1>
       </div>
       <CircuitBorder flip={true} />
+
+      {/* Certificates */}
       <div className="my-24 flex h-auto w-full flex-row items-center justify-center">
-        <h1 className="relative z-10 mr-16 text-center text-subheadingpoppins2rem font-bold">
+        <h1 className="relative z-10 mr-16 text-center text-[1.3rem] font-bold lg:text-subheadingpoppins2rem">
           &lt;Certificates /&gt;
           <span className="absolute bottom-3.5 left-1/2 -z-10 h-[4px] w-full -translate-x-1/2 transform animate-pulse bg-[#003e3e] opacity-100 shadow-[0_-5px_10px_#00FFFF] blur-[2px]"></span>
         </h1>

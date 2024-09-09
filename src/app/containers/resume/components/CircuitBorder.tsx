@@ -7,11 +7,11 @@ interface CircuitBorderProps {
 const CircuitBorder: React.FC<CircuitBorderProps> = ({ flip }) => {
   return (
     <div
-      className={` ${flip ? "relative -left-0.5 scale-x-[-1]" : ""}`} // Conditionally adding 'scale-x-[-1]' class based on the 'flip' prop
+      className={` ${flip ? "-left-0.5 scale-x-[-1]" : ""}`} // Conditionally adding 'scale-x-[-1]' class based on the 'flip' prop
     >
       <div
         id="main"
-        className="relative z-10 flex h-[24px] w-[650px] items-center justify-center"
+        className="z-10 hidden h-[24px] w-[650px] items-center justify-center md:relative md:flex"
       >
         {/* Horizontal line with circles */}
         <div className="absolute -top-[170px] left-[54px] flex h-9 w-9 items-center justify-center rounded-full bg-foregroundlightcyan">
