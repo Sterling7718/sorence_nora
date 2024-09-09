@@ -4,7 +4,7 @@ import CircuitBorder from "./components/CircuitBorder";
 
 const ResumeSection = () => {
   return (
-    <main className="mb-6 flex h-auto w-full flex-col flex-wrap items-center justify-center border">
+    <main className="mb-6 flex h-auto w-full flex-col flex-wrap items-center justify-center">
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0"
