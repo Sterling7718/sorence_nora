@@ -47,7 +47,7 @@ const ResumeSection = () => {
             href="https://drive.google.com/file/d/1_2AFU6mu0gYI23akwfE4JxWfK6lw1ITj/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 rounded-full bg-blue-500 px-4 py-2 text-foregroundparchment transition duration-300 hover:bg-blue-700 max-sm:scale-75"
+            className="mt-4 rounded-full bg-blue-500 px-4 py-2 text-foregroundparchment transition duration-300 hover:bg-blue-700 max-sm:scale-50"
           >
             View My Resume
           </a>
