@@ -51,7 +51,7 @@ const Background = () => {
       }}
     >
       {/* Create 20 rows of hexagons using Array(20) */}
-      {[...Array(35)].map((_, rowIndex) => (
+      {[...Array(40)].map((_, rowIndex) => (
         <div
           key={rowIndex}
           style={{
