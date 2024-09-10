@@ -51,7 +51,7 @@ const Background = () => {
       }}
     >
       {/* Create 20 rows of hexagons using Array(20) */}
-      {[...Array(20)].map((_, rowIndex) => (
+      {[...Array(35)].map((_, rowIndex) => (
         <div
           key={rowIndex}
           style={{
@@ -85,6 +85,7 @@ const Background = () => {
                   boxShadow: distance < 2 ? "0 0 2px #00ffff" : "none", // Add glow if hexagon is close to the mouse
                   transition: "2s", // Smooth transition of the glow effect
                 }}
+                className="lg:h-[120px] xl:w-[100px]"
               ></div>
             );
           })}
