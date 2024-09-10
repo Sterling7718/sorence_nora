@@ -51,7 +51,7 @@ const Background = () => {
       }}
     >
       {/* Create 20 rows of hexagons using Array(20) */}
-      {[...Array(40)].map((_, rowIndex) => (
+      {[...Array(45)].map((_, rowIndex) => (
         <div
           key={rowIndex}
           style={{
@@ -62,7 +62,7 @@ const Background = () => {
           }}
         >
           {/* For each row, create 25 hexagons */}
-          {[...Array(25)].map((_, hexIndex) => {
+          {[...Array(30)].map((_, hexIndex) => {
             // Calculate the hexagon's x and y position on the grid
             const hexX = hexIndex * 52 + (rowIndex % 2 ? 26 : 0); // Stagger hexagons horizontally
             const hexY = rowIndex * 60; // Space hexagons vertically
