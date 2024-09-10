@@ -45,36 +45,36 @@ export default function Home() {
   return (
     <main
       draggable="false" // Prevent image dragging
-      className="relative z-10 h-screen w-full overflow-y-auto text-center font-sans text-foregroundparchment"
+      className="relative z-10 h-screen w-full items-center justify-center overflow-y-auto overflow-x-hidden text-center font-sans text-foregroundparchment"
       style={{ userSelect: "none" }}
     >
       {/* Changed overflow-hidden to overflow-y-auto to allow vertical scrolling */}
 
       {isVisible && (
-        <div className="sticky top-3 z-20">
+        <div className="sticky top-3 z-20 border">
           <NavBarSticky />
         </div>
       )}
 
-      <div id="home" className="h-screen pt-1">
+      <div id="home" className="h-screen border pt-1">
         <div ref={targetRef}>
           <NavBar />
         </div>
         <HeroSection />
       </div>
-      <div id="skills" className="">
+      <div id="skills" className="border">
         <SkillSection />
       </div>
-      <div id="projects" className="">
+      <div id="projects" className="border">
         <ProjectsSection />
       </div>
-      <div id="resume" className="">
+      <div id="resume" className="border">
         <ResumeSection />
       </div>
-      <div id="contact" className="">
+      <div id="contact" className="border">
         <ContactSection />
       </div>
-      <div id="footer" className="">
+      <div id="footer" className="border">
         <Footer />
       </div>
       <Background />
