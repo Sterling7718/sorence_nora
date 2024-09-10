@@ -3,23 +3,24 @@ import React, { useState, useEffect } from "react";
 
 // Define the Background component
 const Background = () => {
-  // Define a state to track the mouse position, starting with (0,0)
+  // State to track the mouse position, starting with (0,0)
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  // Function to update the mouse position when the user moves the mouse
-  const handleMouseMove = (event: { clientX: number; clientY: number }) => {
-    setMousePos({ x: event.clientX, y: event.clientY });
-  };
+  // State to track whether we're in a client-side environment
+  const [isClient, setIsClient] = useState(false);
 
   // useEffect to set the initial mouse position to the center of the screen and listen for mouse movements
   useEffect(() => {
+    // Set isClient to true once in the browser
+    setIsClient(true);
+
     // Ensure we're in a browser environment
     if (typeof window !== "undefined") {
-      // Set initial mouse position to center of the viewport
+      // Set initial mouse position to the center of the viewport
       setMousePos({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
       // Add event listener to track mouse movements
       window.addEventListener("mousemove", handleMouseMove);
     }
+
     // Cleanup function to remove the event listener when the component unmounts
     return () => {
       if (typeof window !== "undefined") {
@@ -28,13 +29,20 @@ const Background = () => {
     };
   }, []); // Empty dependency array ensures this effect only runs once on mount and cleanup on unmount
 
+  // Function to update the mouse position when the user moves the mouse
+  const handleMouseMove = (event: { clientX: number; clientY: number }) => {
+    setMousePos({ x: event.clientX, y: event.clientY });
+  };
+
   // Function to calculate the distance between two points (x1, y1) and (x2, y2)
   const getDistance = (x1: number, y1: number, x2: number, y2: number) => {
     return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2); // Pythagorean theorem
   };
 
-  // Define a radial glow effect, centered around the current mouse position
-  const glowEffect = `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, #00ffff 10%, #000b0d 60%)`;
+  // Define a radial glow effect, centered around the current mouse position, only in the client
+  const glowEffect = isClient
+    ? `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, #00ffff 10%, #000b0d 60%)`
+    : "none"; // If not client-side, return "none" for background
 
   // Return the JSX for the background and hexagonal grid
   return (
@@ -50,7 +58,7 @@ const Background = () => {
         zIndex: -50, // Z-index to place it behind other components
       }}
     >
-      {/* Create 20 rows of hexagons using Array(20) */}
+      {/* Create 45 rows of hexagons using Array(45) */}
       {[...Array(45)].map((_, rowIndex) => (
         <div
           key={rowIndex}
@@ -61,7 +69,7 @@ const Background = () => {
             overflow: "hidden", // Prevent overflow of hexagons outside the div
           }}
         >
-          {/* For each row, create 25 hexagons */}
+          {/* For each row, create 30 hexagons */}
           {[...Array(30)].map((_, hexIndex) => {
             // Calculate the hexagon's x and y position on the grid
             const hexX = hexIndex * 52 + (rowIndex % 2 ? 26 : 0); // Stagger hexagons horizontally
