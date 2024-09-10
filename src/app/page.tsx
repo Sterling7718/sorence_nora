@@ -51,30 +51,30 @@ export default function Home() {
       {/* Changed overflow-hidden to overflow-y-auto to allow vertical scrolling */}
 
       {isVisible && (
-        <div className="sticky top-3 z-20 border">
+        <div className="sticky top-3 z-20">
           <NavBarSticky />
         </div>
       )}
 
-      <div id="home" className="h-screen border pt-1">
+      <div id="home" className="h-screen pt-1">
         <div ref={targetRef}>
           <NavBar />
         </div>
         <HeroSection />
       </div>
-      <div id="skills" className="border">
+      <div id="skills" className="">
         <SkillSection />
       </div>
-      <div id="projects" className="border">
+      <div id="projects" className="">
         <ProjectsSection />
       </div>
-      <div id="resume" className="border">
+      <div id="resume" className="">
         <ResumeSection />
       </div>
-      <div id="contact" className="border">
+      <div id="contact" className="">
         <ContactSection />
       </div>
-      <div id="footer" className="border">
+      <div id="footer" className="">
         <Footer />
       </div>
       <Background />
