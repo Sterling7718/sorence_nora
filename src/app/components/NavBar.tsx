@@ -70,6 +70,7 @@ const NavBar = () => {
 
             {/* Image */}
             <Image
+              draggable="false" // Prevent image dragging
               src="/logo.svg"
               alt="Logo"
               width={50}

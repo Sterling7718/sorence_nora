@@ -29,6 +29,7 @@ const Card: React.FC<CardProps> = ({ src, borderColor, tooltipContent }) => {
             className="max-w-fit rounded-md bg-bg px-3 py-2 opacity-90"
           >
             <Image
+              draggable="false" // Prevent image dragging
               src={src}
               width={50}
               height={50}
